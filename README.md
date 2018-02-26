@@ -11,7 +11,7 @@ You can install with one of the following:
 ### Theming
 
 If you install with composer, you need to copy `/web/css` to customize the files:
-`cp -r composer/xtend-magento/web/css/ app/design/frontend/<vendor>/<theme/web/css/`
+`cp -r composer/xtend-magento/web/css/ app/design/frontend/<vendor>/<theme>/web/css/`
 
 ### Library
 
