@@ -16,7 +16,7 @@ If you install with composer, you need to copy `/web/css` to customize the files
 ### Library
 
 You also need to install Xtend library, use the [xtend installation procedure](https://github.com/minimit/xtend#installation) from 
-inside your theme's `/web` folder.
+within your theme folder.
 
 # Copyright
 
