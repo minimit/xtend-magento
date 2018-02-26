@@ -1,0 +1,134 @@
+//////////////////////
+// rating
+//////////////////////
+
+.rating-summary,
+.reviews-actions {
+  .margin(bottom, tiny);
+  line-height: 1;
+}
+
+// .product-reviews-summary
+
+.product-reviews-summary {
+  .list-line();
+  .list-space(medium);
+  .align-items-center();
+}
+
+// .rating-summary
+
+.rating-summary {
+  .display(flex);
+  .label {
+    .sr-only();
+  }
+  .rating-result {
+    position: relative;
+    .icon(@icon-star @icon-star @icon-star @icon-star @icon-star, 1.25rem, false);
+    &:before {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 100%;
+      height: 1.25rem;
+      color: darken(@grey-250, 5%);
+    }
+    > span {
+      display: block;
+      overflow: hidden;
+      .icon(@icon-star @icon-star @icon-star @icon-star @icon-star, 1.25rem);
+      &:before {
+        display: block;
+        z-index: 2;
+        height: 1.25rem;
+        color: @primary;
+      }
+    }
+  }
+}
+
+// .reviews-actions
+
+.reviews-actions {
+  .action {
+    .btn-small();
+    .btn-none();
+    .btn-link();
+  }
+  .action + .action {
+    .margin(left, 1.5rem);
+  }
+}
+
+// .review-list
+
+.review-list {
+  .margin(bottom, medium);
+  .block-title {
+    .h4();
+  }
+  .toolbar {
+    .display(none);
+  }
+  .review-items {
+    .list-block();
+    .list-space(small);
+  }
+}
+.review-title {
+  .h5();
+}
+.review-details {
+  .margin(top, small);
+  .font-tiny();
+  .muted();
+  > p {
+    float: left;
+    .margin(right, small);
+  }
+}
+
+// .review-add
+
+.review-add {
+  .block-title {
+    .h4();
+  }
+  legend {
+    .display(none);
+  }
+  .review-control-vote {
+    .form-group.inline();
+    .form-group-small();
+    label {
+      .label-special();
+      .padding(right, medium) !important;
+    }
+  }
+  .action.submit {
+    .btn-giant();
+  }
+}
+
+// .customer-review
+
+.customer-review {
+  .product-media {
+    .margin(bottom, big);
+    border: 1px solid darken(@grey-250, 5%);
+    background-color: @grey-250;
+  }
+  .review-details .title,
+  .rating-average-label {
+    .block();
+    .h5();
+    .margin(top, medium) !important;
+    .margin(bottom, small) !important;
+  }
+  .rating-label {
+    .display(none);
+  }
+}

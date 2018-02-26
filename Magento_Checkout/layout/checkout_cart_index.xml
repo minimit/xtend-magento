@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="checkout_cart_item_renderers"/>
+    <body>
+
+        <!-- cart.summary -->
+
+        <move element="cart.summary" destination="cart.summary.outer"/>
+        <referenceContainer name="checkout.cart.container">
+            <container name="cart.summary.outer" htmlTag="div" htmlClass="cart-summary-outer"/>
+        </referenceContainer>
+
+    </body>
+</page>

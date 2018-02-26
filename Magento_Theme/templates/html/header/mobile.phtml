@@ -1,0 +1,53 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+
+<div data-mage-init='{"tabs":
+    {"openedState": "active",
+    "collapsibleElement": ".header-mobile-head a",
+    "content": ".header-mobile-body"}}'>
+
+    <ul class="header-mobile-head">
+        <li>
+            <a href="#header-mobile-menu">
+                <?= __('Menu') ?>
+            </a>
+        </li>
+        <li>
+            <a href="#header-mobile-settings">
+                <?= __('Settings') ?>
+            </a>
+        </li>
+    </ul>
+
+    <div class="header-mobile-body" id="header-mobile-menu">
+        <h4><?= __('Shop') ?></h4>
+        <div class="header-mobile-inner">
+            <?= $block->getChildHtml('header.mobile.nav'); ?>
+        </div>
+        <h4><?= __('Links') ?></h4>
+        <div class="header-mobile-inner">
+            <?= $block->getChildHtml('header.mobile.links.additional'); ?>
+        </div>
+    </div>
+
+    <div class="header-mobile-body" id="header-mobile-settings">
+        <h4><?= __('Account') ?></h4>
+        <div class="header-mobile-inner">
+            <?= $block->getChildHtml('header.mobile.store'); ?>
+        </div>
+        <h4><?= __('Settings') ?></h4>
+        <div class="header-mobile-inner">
+            <?= $block->getChildHtml('language.switcher.wrapper.duplicate'); ?>
+            <?= $block->getChildHtml('currency.switcher.wrapper.duplicate'); ?>
+            <?= $block->getChildHtml('store.switcher.wrapper.duplicate'); ?>
+        </div>
+    </div>
+
+</div>

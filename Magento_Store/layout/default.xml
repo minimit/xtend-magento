@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <!-- language.switcher.wrapper -->
+
+        <referenceBlock name="footer.content">
+            <block class="Magento\Store\Block\Switcher" name="language.switcher.wrapper"
+                   template="Magento_Store::switch/language-wrapper.phtml">
+                <block class="Magento\Store\Block\Switcher" name="language.switcher"
+                       template="Magento_Store::switch/languages.phtml"/>
+            </block>
+        </referenceBlock>
+
+        <!-- language.switcher.wrapper.duplicate -->
+
+        <referenceBlock name="header.mobile">
+            <block class="Magento\Store\Block\Switcher" name="language.switcher.wrapper.duplicate"
+                   template="Magento_Store::switch/language-wrapper.phtml">
+                <block class="Magento\Store\Block\Switcher" name="language.switcher.duplicate"
+                       template="Magento_Store::switch/languages.phtml"/>
+            </block>
+        </referenceBlock>
+
+        <!-- currency.switcher.wrapper -->
+
+        <referenceBlock name="footer.content">
+            <block class="Magento\Store\Block\Switcher" name="currency.switcher.wrapper"
+                   template="Magento_Store::switch/currency-wrapper.phtml">
+                <block class="Magento\Directory\Block\Currency" name="currency.switcher"
+                       template="Magento_Directory::currency.phtml"/>
+            </block>
+        </referenceBlock>
+
+        <!-- currency.switcher.wrapper.duplicate -->
+
+        <referenceBlock name="header.mobile">
+            <block class="Magento\Store\Block\Switcher" name="currency.switcher.wrapper.duplicate"
+                   template="Magento_Store::switch/currency-wrapper.phtml">
+                <block class="Magento\Directory\Block\Currency" name="currency.switcher.duplicate"
+                       template="Magento_Directory::currency.phtml"/>
+            </block>
+        </referenceBlock>
+
+        <!-- store.switcher.wrapper -->
+
+        <referenceBlock name="footer.content">
+            <block class="Magento\Store\Block\Switcher" name="store.switcher.wrapper"
+                   template="Magento_Store::switch/store-wrapper.phtml">
+                <block class="Magento\Store\Block\Switcher" name="store.switcher"
+                       template="Magento_Store::switch/stores.phtml"/>
+            </block>
+        </referenceBlock>
+
+        <!-- store.switcher.wrapper.duplicate -->
+
+        <referenceBlock name="header.mobile">
+            <block class="Magento\Store\Block\Switcher" name="store.switcher.wrapper.duplicate"
+                   template="Magento_Store::switch/store-wrapper.phtml">
+                <block class="Magento\Store\Block\Switcher" name="store.switcher.duplicate"
+                       template="Magento_Store::switch/stores.phtml"/>
+            </block>
+        </referenceBlock>
+
+    </body>
+</page>

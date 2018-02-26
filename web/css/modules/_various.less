@@ -1,0 +1,109 @@
+//////////////////////
+// send friend
+//////////////////////
+
+// .form.send.friend
+
+.form.send.friend {
+  .box();
+  .box-giant();
+  max-width: 62.5rem;
+}
+
+//////////////////////
+// advanced search
+//////////////////////
+
+// .form.search.advanced
+
+.form.search.advanced {
+  .box();
+  .box-giant();
+  max-width: 62.5rem;
+}
+
+// .search.found
+
+.search.found {
+  .font-small();
+}
+
+// .search.summary
+
+.search.summary {
+  .margin(bottom, medium);
+  .font-small();
+}
+
+// .search.results
+
+.search.results {
+  .margin(top, medium);
+}
+
+//////////////////////
+// calendar
+//////////////////////
+
+// @TODO .ui-datepicker
+
+//////////////////////
+// print
+//////////////////////
+
+// page
+
+.page-print {
+  .header-main-inner {
+    padding: 0 !important;
+  }
+  .footer-bottom {
+    padding: 0 !important;
+  }
+}
+
+// print
+
+@media print {
+
+  @page {
+    margin: 1cm;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+      page-break-after: avoid;
+  }
+
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  img,
+  tr,
+  pre,
+  blockquote,
+  .box,
+  .block {
+    page-break-inside: avoid;
+  }
+
+  .actions-toolbar {
+    display: none;
+  }
+
+}

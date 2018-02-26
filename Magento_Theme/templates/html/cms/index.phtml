@@ -1,0 +1,75 @@
+<button type="button" class="action primary open-modal-test-1">
+    <span>normal</span>
+</button>
+<button type="button" class="action primary open-modal-test-2">
+    <span>screen</span>
+</button>
+<div id="modal-test-1" style="display:none;">
+    <h3>Title h2</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum velit condimentum efficitur feugiat. Sed sit amet leo nunc. Sed consectetur lectus a erat commodo, id facilisis metus sagittis. Morbi ullamcorper massa vel diam commodo, eget fermentum nisi aliquam. Vivamus gravida bibendum diam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum velit condimentum efficitur feugiat. Sed sit amet leo nunc. Sed consectetur lectus a erat commodo, id facilisis metus sagittis. Morbi ullamcorper massa vel diam commodo, eget fermentum nisi aliquam. Vivamus gravida bibendum diam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum velit condimentum efficitur feugiat. Sed sit amet leo nunc. Sed consectetur lectus a erat commodo, id facilisis metus sagittis. Morbi ullamcorper massa vel diam commodo, eget fermentum nisi aliquam. Vivamus gravida bibendum diam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum velit condimentum efficitur feugiat. Sed sit amet leo nunc. Sed consectetur lectus a erat commodo, id facilisis metus sagittis. Morbi ullamcorper massa vel diam commodo, eget fermentum nisi aliquam. Vivamus gravida bibendum diam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum velit condimentum efficitur feugiat. Sed sit amet leo nunc. Sed consectetur lectus a erat commodo, id facilisis metus sagittis. Morbi ullamcorper massa vel diam commodo, eget fermentum nisi aliquam. Vivamus gravida bibendum diam.</p>
+</div>
+<div id="modal-test-2" style="display:none;">
+    <h3>Title h2</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum velit condimentum efficitur feugiat. Sed sit amet leo nunc. Sed consectetur lectus a erat commodo, id facilisis metus sagittis. Morbi ullamcorper massa vel diam commodo, eget fermentum nisi aliquam. Vivamus gravida bibendum diam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum velit condimentum efficitur feugiat. Sed sit amet leo nunc. Sed consectetur lectus a erat commodo, id facilisis metus sagittis. Morbi ullamcorper massa vel diam commodo, eget fermentum nisi aliquam. Vivamus gravida bibendum diam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum velit condimentum efficitur feugiat. Sed sit amet leo nunc. Sed consectetur lectus a erat commodo, id facilisis metus sagittis. Morbi ullamcorper massa vel diam commodo, eget fermentum nisi aliquam. Vivamus gravida bibendum diam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum velit condimentum efficitur feugiat. Sed sit amet leo nunc. Sed consectetur lectus a erat commodo, id facilisis metus sagittis. Morbi ullamcorper massa vel diam commodo, eget fermentum nisi aliquam. Vivamus gravida bibendum diam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum velit condimentum efficitur feugiat. Sed sit amet leo nunc. Sed consectetur lectus a erat commodo, id facilisis metus sagittis. Morbi ullamcorper massa vel diam commodo, eget fermentum nisi aliquam. Vivamus gravida bibendum diam.</p>
+</div>
+<script type="text/javascript">
+
+    require([
+        'jquery',
+        'Magento_Ui/js/modal/modal'
+    ], function($, modal){
+
+        // make modal-test-1
+        var modaltest1 = {
+            type: 'popup',
+            responsive: true,
+            innerScroll: true,
+            modalClass: 'modal-test-1',
+            title: $.mage.__('Modal test 1'),
+            buttons: [{
+                text: $.mage.__('Close'),
+                class: '',
+                click: function () {
+                    this.closeModal();
+                }
+            }]
+        };
+
+        // open modal-test-1
+        modal(modaltest1, $('#modal-test-1'));
+        $('.open-modal-test-1').on('click',function(){
+            $('#modal-test-1').modal("openModal");
+        });
+
+        // make modal-test-2
+        var modaltest2 = {
+            type: 'popup',
+            responsive: true,
+            innerScroll: true,
+            modalClass: 'overlay-screen',
+            title: $.mage.__('Modal test 2'),
+            buttons: [{
+                text: $.mage.__('Close'),
+                class: '',
+                click: function () {
+                    this.closeModal();
+                }
+            }]
+        };
+
+        // open modal-test-1
+        modal(modaltest2, $('#modal-test-2'));
+        $('.open-modal-test-2').on('click',function(){
+            $('#modal-test-2').modal("openModal");
+        });
+
+    });
+</script>

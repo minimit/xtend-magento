@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+
+        <!-- meta -->
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+
+        <!-- favicons -->
+
+        <link rel="apple-touch-icon" src="Magento_Theme::favicon-152x152.png"/>
+
+        <!-- remove magento -->
+
+        <remove src="Magento_Swatches::css/swatches.css"/>
+        <!--<remove src="mage/gallery/gallery.css"/>-->
+        <remove src="mage/calendar.css"/>
+        <remove src="css/styles-m.css"/>
+        <remove src="css/styles-l.css"/>
+        <remove src="css/print.css"/>
+
+        <!-- add theme -->
+
+        <link src="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" src_type="url"/>
+        <link src="css/theme.css"/>
+        <link src="js/theme.js"/>
+
+    </head>
+</page>

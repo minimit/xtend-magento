@@ -1,0 +1,54 @@
+//////////////////////
+// swatches
+//////////////////////
+
+.swatch-attribute {
+  .form-group();
+  .products & {
+    .form-group-tiny();
+  }
+  .swatch-attribute-options {
+    width: 100%;
+  }
+  // content
+  a {
+    text-decoration: none;
+  }
+  > div {
+    .list-line();
+    .list-space(tiny);
+  }
+  .swatch-attribute-label {
+    .label-control();
+  }
+  .swatch-attribute-selected-option {
+    .margin(left, small);
+    .label-control();
+    color: @primary;
+  }
+  .swatch-input {
+    .display(none);
+  }
+  .swatch-option {
+    &.text {
+      .btn();
+      .btn-tiny();
+      .btn-secondary();
+    }
+    &.color {
+      .btn();
+      .btn-small();
+      .btn-icon();
+      .btn-secondary();
+      border-color: @grey-250 !important;
+    }
+    &.selected {
+      &.text {
+        .btn-secondary.active();
+      }
+      &.color {
+        .btn-secondary-alt.active();
+      }
+    }
+  }
+}

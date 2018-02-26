@@ -1,0 +1,283 @@
+//////////////////////
+// columns
+//////////////////////
+
+.columns {
+  .flex();
+  .flex-space(big);
+  .flex-row();
+  .flex-wrap();
+}
+.page-main {
+  .display(block);
+  .float(left);
+  width: 100%;
+}
+
+// 1column
+
+.page-layout-1column,
+.page-layout-checkout,
+.page-layout-full {
+  .column.main {
+    .all(12);
+  }
+  .sidebar {
+    .all(12);
+  }
+}
+
+// 2columns sizes
+
+.page-layout-2columns-left,
+.page-layout-2columns-right {
+  .column.main {
+    .all(12);
+    .min(sm, 8);
+    .min(md, 9);
+  }
+  .sidebar {
+    .all(12);
+    .min(sm, 4);
+    .min(md, 3);
+  }
+}
+
+// 2columns order with float
+
+.page-layout-2columns-left {
+  @media @min-sm {
+    .columns {
+      .display(block);
+    }
+    .column.main {
+      .float(right);
+      clear: right;
+    }
+    .sidebar {
+      .float(left);
+      clear: left;
+    }
+  }
+}
+.page-layout-2columns-right {
+  @media @min-sm {
+    .columns {
+      .display(block);
+    }
+    .column.main {
+      .float(left);
+      clear: left;
+    }
+    .sidebar {
+      .float(right);
+      clear: right;
+    }
+  }
+}
+
+// 2columns order mobile
+
+.page-layout-2columns-left,
+.page-layout-2columns-right {
+  @media @max-sm {
+    .column.main {
+      .flex-order(1);
+    }
+    .sidebar {
+      .flex-order(0);
+    }
+    .sidebar-additional {
+      .flex-order(2);
+    }
+  }
+}
+
+//////////////////////
+// product
+//////////////////////
+
+.catalog-product-view {
+  // reset
+  .columns {
+    .display(block);
+    .flex-space(none);
+  }
+  .column.main {
+    width: auto !important;
+    max-width: none !important;
+  }
+  // columns with flex
+  .column.main {
+    .flex();
+    .flex-space(big);
+    .flex-row();
+    .flex-wrap();
+  }
+  .product-info-main {
+    .all(12);
+    .min(sm, 7);
+    .min(md, 5);
+    .flex-order(1);
+  }
+  .product.media {
+    .all(12);
+    .min(sm, 5);
+    .min(md, 7);
+    .flex-order(0);
+  }
+  .product.info {
+    .all(12);
+    .flex-order(2);
+  }
+}
+
+//////////////////////
+// cart
+//////////////////////
+
+.cart-container {
+  .flex();
+  .flex-space(big);
+  .flex-row();
+  .flex-wrap();
+  // sizes
+  .form-cart {
+    .all(12);
+    .min(md, 8);
+  }
+  #gift-options-cart {
+    .all(12);
+    .min(md, 8);
+  }
+  .cart-discount {
+    .all(12);
+    .min(md, 8);
+  }
+  .cart-summary-outer {
+    .all(12);
+    .min(md, 4);
+  }
+  // order with float
+  @media @min-md {
+    .display(block);
+    .form-cart {
+      .float(left);
+    }
+    #gift-options-cart {
+      .float(left);
+    }
+    .cart-discount {
+      .float(left);
+    }
+    .cart-summary-outer {
+      .float(right);
+      clear: right;
+    }
+  }
+  // order mobile
+  @media @max-md {
+    .form-cart {
+      .flex-order(1);
+    }
+    #gift-options-cart {
+      .flex-order(2);
+    }
+    .cart-discount {
+      .flex-order(3);
+    }
+    .cart-summary-outer {
+      .flex-order(0);
+    }
+  }
+}
+
+//////////////////////
+// checkout
+//////////////////////
+
+.checkout-index-index {
+  // reset
+  .columns {
+    .display(block);
+    .flex-space(none);
+  }
+  .column.main {
+    width: auto !important;
+    max-width: none !important;
+  }
+  // sizes
+  .checkout-container {
+    .flex();
+    .flex-space(big);
+    .flex-row();
+    .flex-wrap();
+  }
+  .opc-progress-bar {
+    .all(12);
+    .min(md, 8);
+  }
+  .opc-wrapper {
+    .all(12);
+    .min(md, 8);
+  }
+  .opc-estimated-wrapper {
+    .all(12);
+    .min(md, 4);
+  }
+  .opc-sidebar {
+    .all(12);
+    .min(md, 4);
+  }
+  // order with float
+  @media @min-md {
+    .checkout-container {
+      .display(block);
+    }
+    .opc-progress-bar {
+      .float(left);
+    }
+    .opc-wrapper {
+      .float(left);
+    }
+    .opc-sidebar {
+      .float(right);
+      clear: right;
+    }
+  }
+  // order mobile
+  @media @max-md {
+    .opc-progress-bar {
+      .flex-order(0);
+    }
+    .opc-wrapper {
+      .flex-order(4);
+    }
+    .opc-sidebar {
+      .flex-order(3);
+    }
+  }
+}
+
+//////////////////////
+// contain
+//////////////////////
+
+body:not(.page-layout-fullcolumn) {
+  .main-container {
+    &:extend(.contain-fluid);
+  }
+}
+
+//////////////////////
+// sticky footer
+//////////////////////
+
+.page-wrapper {
+  .display(flex);
+  .flex-column();
+  min-height: 100vh;
+}
+.main-container {
+  .flex-auto();
+}

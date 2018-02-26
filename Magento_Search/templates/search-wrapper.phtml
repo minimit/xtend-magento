@@ -1,0 +1,36 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+?>
+
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+/** @var $helper \Magento\Search\Helper\Data */
+$helper = $this->helper(\Magento\Search\Helper\Data::class);
+?>
+
+<div class="search-wrapper">
+
+    <button type="button">
+        <span><?= __('Search') ?></span>
+    </button>
+
+    <div class="search-dropdown empty"
+         data-role="dropdownDialog"
+         data-mage-init='{"dropdownDialog":{
+            "timeout": "2000",
+            "closeOnMouseLeave": false,
+            "closeOnEscape": true,
+            "triggerClass":"active",
+            "parentClass":"active",
+            "buttons":[]}}'>
+
+        <?= /* @escapeNotVerified */ $block->getChildHtml() ?>
+
+    </div>
+
+</div>

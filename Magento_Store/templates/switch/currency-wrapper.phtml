@@ -1,0 +1,33 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Store\Block\Switcher $block */
+?>
+
+<?php if (count($block->getGroups())>1): ?>
+    <div class="currency-wrapper">
+
+        <button type="button">
+            <span><?= __('Currency') ?></span>
+        </button>
+
+        <div data-role="dropdownDialog"
+             data-mage-init='{"dropdownDialog":{
+                "timeout": "2000",
+                "closeOnMouseLeave": false,
+                "closeOnEscape": true,
+                "triggerClass":"active",
+                "parentClass":"active",
+                "buttons":[]}}'>
+
+            <?= /* @escapeNotVerified */ $block->getChildHtml() ?>
+
+        </div>
+
+    </div>
+<?php endif; ?>

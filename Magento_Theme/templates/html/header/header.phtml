@@ -1,0 +1,54 @@
+<?php /** @var \Magento\Framework\View\Element\Template $block */?>
+
+<?= $block->getChildHtml('header.skip') ?>
+
+<nav class="header-content" role="navigation">
+
+    <div class="header-main">
+        <div class="contain-fluid">
+            <div class="header-main-inner">
+
+                <div class="header-main-nav">
+                    <button type="button" class="nav-toggle" data-action="toggle-nav">
+                        <span><?= __('Navigation') ?></span>
+                    </button>
+                </div>
+
+                <div class="header-main-logo">
+                    <?= $block->getChildHtml('header.logo'); ?>
+                </div>
+
+                <div class="header-nav">
+                    <?= $block->getChildHtml('header.nav'); ?>
+                </div>
+
+                <div class="header-main-links">
+                    <div class="header-main-links-inner">
+                        <?= $block->getChildHtml('header.links.additional') ?>
+                        <?= $block->getChildHtml('header.links.store') ?>
+                    </div>
+                </div>
+
+                <div class="header-main-right">
+                    <div class="header-main-right-inner">
+                        <?= $block->getChildHtml('search.wrapper') ?>
+                        <?= $block->getChildHtml('minicart.wrapper') ?>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</nav>
+
+<div class="header-mobile">
+    <div class="header-mobile-backdrop" data-action="toggle-nav"></div>
+    <div class="header-mobile-content nav-sections"> <!-- .nav-sections for closing menu on swipeleft -->
+        <div class="header-mobile-content-inner">
+
+            <?= $block->getChildHtml('header.mobile'); ?>
+
+        </div>
+    </div>
+</div>

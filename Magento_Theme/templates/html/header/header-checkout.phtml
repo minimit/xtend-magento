@@ -1,0 +1,19 @@
+<?php /** @var \Magento\Framework\View\Element\Template $block */?>
+
+<?= $block->getChildHtml('header.skip') ?>
+
+<nav class="header-content" role="navigation">
+
+    <div class="header-main">
+        <div class="contain-fluid">
+            <div class="header-main-inner">
+
+                <div class="header-main-logo">
+                    <?= $block->getChildHtml('header.logo.checkout'); ?>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</nav>

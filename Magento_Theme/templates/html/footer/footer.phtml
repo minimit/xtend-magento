@@ -1,0 +1,47 @@
+<?php /** @var \Magento\Framework\View\Element\Template $block */ ?>
+
+<nav class="footer-content" role="navigation">
+
+    <div class="footer-top">
+        <div class="contain-fluid">
+
+            <div class="footer-top-inner">
+
+                <div class="all-6 sm-4 md-3 lg-2">
+                  <?= $block->getChildHtml('footer.links'); ?>
+                </div>
+
+                <div class="all-6 sm-4 md-3 lg-2">
+                  <?= $block->getChildHtml('footer.links.additional') ?>
+                </div>
+
+                <div class="all-12 sm-4 lg-3 ml-auto">
+                  <?= $block->getChildHtml('footer.subscribe'); ?>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="contain-fluid">
+
+            <div class="footer-bottom-inner">
+
+                <div class="footer-bottom-left">
+                    <?= $block->getChildHtml('copyright'); ?>
+                </div>
+
+                <div class="footer-bottom-right">
+                    <?= $block->getChildHtml('language.switcher.wrapper') ?>
+                    <?= $block->getChildHtml('currency.switcher.wrapper'); ?>
+                    <?= $block->getChildHtml('store.switcher.wrapper'); ?>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</nav>

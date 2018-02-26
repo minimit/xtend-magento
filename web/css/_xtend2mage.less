@@ -1,0 +1,289 @@
+//////////////////////
+// button
+//////////////////////
+
+button,
+.action.primary {
+  &:extend(.btn all);
+  &:extend(.btn-primary all);
+  &.abs-button-s {
+    &:extend(.btn-small all);
+  }
+  &.abs-button-l {
+    &:extend(.btn-big all);
+  }
+  &.alink {
+    &:extend(.btn-link all);
+  }
+  &.abs-button-responsive {
+    .block();
+    .text(center);
+  }
+}
+
+.action.secondary,
+.action-secondary {
+  &:extend(.btn-secondary all);
+}
+
+//////////////////////
+// drop
+//////////////////////
+
+.ui-dialog-container {
+  &:extend(.drop-outer all);
+  &.active {
+    .ui-dialog {
+      &:extend(.drop.fade-in all);
+    }
+  }
+}
+
+.ui-dialog {
+  &:extend(.drop all);
+}
+
+.ui-dialog .ui-dialog-content {
+  display: block;
+  &:extend(.drop .drop-inner all);
+}
+
+.ui-dialog-content > ul,
+ul.dropdown { // ul.dropdown is store and language etc..
+  &:extend(.list-block all);
+  &:extend(.list-default all);
+  &:extend(.drop .drop-inner > ul all);
+}
+
+// @FIX toggle
+
+.ui-dialog {
+  display: block;
+}
+
+// @FIX hide before mage-init
+
+[data-role="dropdownDialog"] {
+  display: none;
+}
+
+//////////////////////
+// overlay
+//////////////////////
+
+.modal-custom:not(.opc-sidebar),
+.modal-popup {
+  &:extend(.overlay all);
+  .modal-outer-wrap {
+    &:extend(.overlay .overlay-inner all);
+  }
+  .modal-inner-wrap {
+    &:extend(.overlay .overlay-content all);
+  }
+  &.overlay-screen {
+    .modal-outer-wrap {
+      &:extend(.overlay.overlay-screen .overlay-inner all);
+    }
+    .modal-inner-wrap {
+      &:extend(.overlay.overlay-screen .overlay-content all);
+    }
+    .modals-overlay {
+      display: none;
+    }
+  }
+  &._show {
+    &:extend(.overlay.active all);
+    .modal-inner-wrap {
+      &:extend(.overlay .overlay-content.fade-in all);
+    }
+    .modals-overlay {
+      &:extend(.xt-backdrop.fade-in all);
+    }
+  }
+  .action-close {
+    &:extend(.btn all);
+    &:extend(.btn-close all);
+    &:extend(.overlay .btn-close all);
+  }
+}
+
+.modals-overlay {
+  &:extend(.xt-backdrop all);
+}
+
+body._has-modal {
+  overflow-y: hidden;
+  .overlay._show {
+    overflow-y: scroll;
+  }
+}
+
+//////////////////////
+// tab
+//////////////////////
+
+[role="tablist"] {
+  &:extend(.list-line all);
+  &:extend(.list-default all);
+}
+
+// @FIX size
+
+[role="tablist"],
+[role="tabpanel"],
+[data-role="collapsible"] {
+  width: 100%;
+}
+
+// @FIX hide before mage-init
+
+[data-role="collapsible"] {
+  [data-role="content"], & + [data-role="content"] {
+    &:not([aria-hidden="false"]) {
+      .display(none) !important;
+    }
+  }
+}
+
+// @FIX hide before mage-init
+// took from magento
+
+.block.shipping:not(.active) .content,
+.block.discount:not(.active) .content {
+    display: none;
+}
+
+//////////////////////
+// forms
+//////////////////////
+
+.field {
+  &:extend(.form-group all);
+}
+
+label {
+  &:extend(.label-control all);
+}
+
+.input-text,
+select,
+textarea,
+.limiter-options,
+.sorter-options {
+  &:extend(.input-control all);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  &:extend(.input-special all);
+  & + label {
+    &:extend(.label-special all);
+  }
+}
+
+caption,
+.super-attribute-select {
+  display: none !important;
+}
+
+// @FIX nested fields
+
+.field .field {
+  .margin(top, 1em) !important;
+  .margin(bottom, 0) !important;
+}
+
+// @FIX select arrow
+
+select {
+  &:extend(select.input-control all);
+}
+
+// @FIX .control
+
+.control {
+  width: 100%;
+}
+
+.form-group.inline {
+  .control {
+    width: auto;
+  }
+}
+
+// @FIX .control inside .input-group
+
+.input-group {
+  .control, .control .input-control {
+    height: 100%;
+  }
+}
+
+// @FIX legend used as label
+
+legend.label {
+  &:extend(.label-control all);
+  margin: 0;
+}
+
+// @FIX remove br
+
+legend + br {
+  display: none !important;
+}
+
+// @FIX field used in weird places
+
+.field {
+  dd & {
+    margin: 0 !important;
+  }
+}
+
+// @FIX span used in weird places
+
+.label-special {
+  > span:not(.price) {
+    .margin(left, none);
+  }
+}
+
+//////////////////////
+// various
+//////////////////////
+
+.action.clear,
+.action.remind,
+.action.order,
+.action.print,
+.action.back {
+  .btn();
+  .btn-small();
+  .btn-secondary();
+}
+.action.skip {
+  .sr-only();
+}
+.action.close {
+  &:extend(.btn-close all);
+}
+
+.no-display {
+  .display(none) !important;
+}
+
+.actions-toolbar {
+  > .action {
+    .flex-order(0);
+  }
+  > .secondary {
+    .flex-order(1);
+  }
+  > .primary {
+    .flex-order(2);
+  }
+}
+
+.password-strength-meter {
+  .note();
+}

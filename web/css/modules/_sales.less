@@ -1,0 +1,55 @@
+//////////////////////
+// block
+//////////////////////
+
+.block-reorder {
+  .display(none) !important;
+}
+
+//////////////////////
+// account
+//////////////////////
+
+.order-status {
+  .alert();
+  .alert-notice();
+}
+
+.order-date {
+  .margin(top, medium);
+  .label {
+    .label-control();
+    .font-small();
+  }
+}
+
+.order-links {
+  .display(none);
+}
+
+.order-details-items {
+  .order-title {
+    .h4();
+  }
+  .label {
+    .margin(right, tiny);
+    .reset-text();
+    &:after {
+      content: ':';
+    }
+  }
+  .col.options {
+    .order-gift-message {
+      .margin(top, small);
+      .box();
+      .box-tiny();
+      .display(none);
+      .action.close {
+        .display(none);
+      }
+      &.expanded-content {
+        .display(flex);
+      }
+    }
+  }
+}

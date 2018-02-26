@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <!--
+        //////////////////////
+        // structure
+        //////////////////////
+        -->
+        
+        <!-- main.content -->
+        
+        <move element="main.content" destination="main.container"/>
+        <referenceContainer name="page.wrapper">
+            <container name="main.container" htmlTag="div" htmlClass="main-container" after="header.container"/>
+        </referenceContainer>
+
+        <!-- breadcrumbs -->
+
+        <move element="breadcrumbs" destination="breadcrumbs.inner"/>
+        <referenceContainer name="page.wrapper">
+            <container name="breadcrumbs.wrapper" htmlTag="div" htmlClass="breadcrumbs-wrapper"
+                       after="header.container">
+                <container name="breadcrumbs.inner" htmlTag="div" htmlClass="contain-fluid"/>
+            </container>
+        </referenceContainer>
+
+        <!-- remove -->
+
+        <referenceBlock name="header.panel.wrapper" remove="true"/>
+        <referenceBlock name="navigation.sections" remove="true"/>
+        <referenceBlock name="compare-link-wrapper" remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="report.customer" remove="true"/>
+        <referenceBlock name="store_switcher" remove="true"/>
+
+        <!--
+        //////////////////////
+        // header
+        //////////////////////
+        -->
+
+        <!-- header.content -->
+        
+        <move element="logo" destination="header.content" as="header.logo"/>
+        <move element="minicart" destination="header.content" as="minicart.wrapper"/>
+        <move element="skip_to_content" destination="header.content" as="header.skip"/>
+        <referenceContainer name="header.container">
+            <block class="Magento\Framework\View\Element\Template" name="header.content"
+                   template="Magento_Theme::html/header/header.phtml"/>
+        </referenceContainer>
+
+        <!-- header.links.store -->
+        
+        <move element="header.links.store" destination="header.content"/>
+        <block class="Magento\Customer\Block\Account\Navigation" name="header.links.store">
+            <arguments>
+                <argument name="css_class" xsi:type="string">header-links-store</argument>
+            </arguments>
+        </block>
+
+        <!-- header.links.additional -->
+        
+        <move element="header.links.additional" destination="header.content"/>
+        <block class="Magento\Customer\Block\Account\Navigation" name="header.links.additional">
+            <arguments>
+                <argument name="css_class" xsi:type="string">header-links-additional</argument>
+            </arguments>
+        </block>
+
+        <!-- header.nav -->
+        
+        <move element="header.nav" destination="header.content"/>
+        <block class="Magento\Theme\Block\Html\Topmenu" name="header.nav"
+               template="Magento_Theme::html/header/nav.phtml"/>
+
+        <!-- header.mobile -->
+        
+        <move element="header.mobile" destination="header.content"/>
+        <block class="Magento\Framework\View\Element\Template" name="header.mobile"
+               template="Magento_Theme::html/header/mobile.phtml">
+            <block class="Magento\Theme\Block\Html\Topmenu" template="Magento_Theme::html/header/nav.phtml"
+                   name="header.mobile.nav"/>
+            <block class="Magento\Customer\Block\Account\Navigation" name="header.mobile.links.additional">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">list</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Customer\Block\Account\Navigation" name="header.mobile.store">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">list</argument>
+                </arguments>
+            </block>
+        </block>
+
+        <!--
+        //////////////////////
+        // header links
+        //////////////////////
+        -->
+
+        <!-- header.links.additional -->
+
+        <referenceBlock name="header.links.additional">
+            <block class="Magento\Framework\View\Element\Html\Link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">About</argument>
+                    <argument name="path" xsi:type="string" translate="true">about</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link" after="about.link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Contacts</argument>
+                    <argument name="path" xsi:type="string" translate="true">contacts</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+        <!-- header.mobile.links.additional -->
+
+        <referenceBlock name="header.mobile.links.additional">
+            <block class="Magento\Framework\View\Element\Html\Link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">About</argument>
+                    <argument name="path" xsi:type="string" translate="true">about</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link" after="about.link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Contacts</argument>
+                    <argument name="path" xsi:type="string" translate="true">contacts</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+        <!--
+        //////////////////////
+        // footer
+        //////////////////////
+        -->
+
+        <!-- footer.content -->
+
+        <move element="copyright" destination="footer.content"/>
+        <move element="form.subscribe" destination="footer.content" as="footer.subscribe"/>
+        <referenceContainer name="footer-container">
+            <block class="Magento\Framework\View\Element\Template" name="footer.content"
+                   template="Magento_Theme::html/footer/footer.phtml"/>
+        </referenceContainer>
+
+        <!-- footer.links -->
+
+        <referenceBlock name="footer.content">
+            <block class="Magento\Framework\View\Element\Html\Links" name="footer.links"
+                   template="Magento_Theme::html/footer/links.phtml">
+                <arguments>
+                    <argument name="title" xsi:type="string" translate="true">Links</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+        <!-- footer.links.additional -->
+
+        <referenceBlock name="footer.content">
+            <block class="Magento\Framework\View\Element\Html\Links" name="footer.links.additional"
+                   template="Magento_Theme::html/footer/links.phtml">
+                <arguments>
+                    <argument name="title" xsi:type="string" translate="true">About</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+        <!--
+        //////////////////////
+        // footer links
+        //////////////////////
+        -->
+
+        <!-- footer.links -->
+
+        <referenceBlock name="footer.links">
+            <block class="Magento\Framework\View\Element\Html\Link\Current">
+                <arguments>
+                    <argument name="label" xsi:type="string">Legal notes</argument>
+                    <argument name="path" xsi:type="string">legal-notes</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current">
+                <arguments>
+                    <argument name="label" xsi:type="string">Privacy</argument>
+                    <argument name="path" xsi:type="string">privacy-policy</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current">
+                <arguments>
+                    <argument name="label" xsi:type="string">Cookies</argument>
+                    <argument name="path" xsi:type="string">cookies</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current">
+                <arguments>
+                    <argument name="label" xsi:type="string">Credits</argument>
+                    <argument name="path" xsi:type="string">http://www.webgriffe.com/</argument>
+                    <argument name="attributes" xsi:type="array">
+                        <item name="target" xsi:type="string">_blank</item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+        <!-- footer.links.additional -->
+
+        <referenceBlock name="footer.links.additional">
+            <block class="Magento\Framework\View\Element\Html\Link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">About</argument>
+                    <argument name="path" xsi:type="string" translate="true">about</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Sales points</argument>
+                    <argument name="path" xsi:type="string" translate="true">store-locator</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Contacts</argument>
+                    <argument name="path" xsi:type="string" translate="true">contacts</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+    </body>
+</page>

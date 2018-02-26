@@ -1,0 +1,11 @@
+<?php /** @var \Magento\Framework\View\Element\Html\Links $block */ ?>
+
+<h4><?= $block->getTitle() ?? 'Title'  ?></h4>
+
+<ul data-role="content">
+    <?php foreach ($block->getLinks() as $link): ?>
+        <li>
+            <a <?= $link->getLinkAttributes() ?>><?= $link->escapeHtml($link->getLabel())?></a>
+        </li>
+    <?php endforeach; ?>
+</ul>

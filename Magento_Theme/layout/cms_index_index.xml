@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="fullcolumn"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <body>
+
+        <!-- page.main.title -->
+
+        <referenceBlock name="page.main.title" remove="true"/>
+
+        <!-- .main -->
+
+        <referenceContainer name="main">
+            <block class="Magento\Framework\View\Element\Template" name="cms.index"
+                   template="Magento_Theme::html/cms/index.phtml" before="-"/>
+        </referenceContainer>
+
+    </body>
+
+</page>

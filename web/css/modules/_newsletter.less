@@ -1,0 +1,48 @@
+//////////////////////
+// newsletter
+//////////////////////
+
+// .block.newsletter
+
+.block.newsletter {
+  @media @max-sm {
+    .margin(top, big);
+    .margin(x, auto);
+    max-width: 30rem;
+  }
+  .title {
+    .h5();
+    .margin(bottom, medium);
+  }
+  form {
+    .form-small();
+    .label {
+      .display(none);
+    }
+    input {
+      .input-control();
+    }
+    .action {
+      .btn-small();
+    }
+  }
+  // input-group
+  form {
+    .input-group();
+    .field {
+      margin: 0;
+      .flex-auto();
+    }
+    input {
+      .input-group .input-control();
+    }
+    .actions {
+      .input-group-line();
+      .action {
+        .input-group-line .btn();
+        .margin(right, none);
+        .margin(left, -@btn-border-width);
+      }
+    }
+  }
+}

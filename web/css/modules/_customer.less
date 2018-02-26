@@ -1,0 +1,190 @@
+//////////////////////
+// account
+//////////////////////
+
+// .login-container
+
+.login-container {
+  .flex();
+  .align-items-stretch();
+  .customer-login-wrapper,
+  .customer-new-wrapper {
+    .all(12);
+    .min(sm, 6);
+  }
+  .block-customer-login,
+  .block-new-customer {
+    .box();
+    .box-giant();
+  }
+  // content
+  .block-title {
+    .h4();
+  }
+}
+
+// .form.create.account
+
+.form.create.account {
+  .box();
+  .box-giant();
+  max-width: 62.5rem;
+}
+
+// .form.password.forget
+
+.form.password.forget {
+  .box();
+  .box-giant();
+  max-width: 62.5rem;
+  // content
+  .field.captcha.no-label {
+    margin: 0;
+    .margin(top, medium);
+  }
+  .captcha-image {
+    .list-line();
+    .list-space(small);
+    .align-items-center();
+    .justify-content-between();
+    // content
+    .action {
+      .btn-tiny();
+    }
+  }
+}
+
+//////////////////////
+// dashboard
+//////////////////////
+
+// dashboard
+
+.block-dashboard-info,
+.block-dashboard-addresses,
+.block-dashboard-orders,
+.block-order-details-view,
+.block-addresses-default,
+.block-addresses-list,
+.block-reviews-dashboard,
+.block-order-details-gift-message {
+  // actions
+  .box-actions {
+    .actions-toolbar();
+    .action {
+      .btn-small();
+      .btn-narrow();
+      .btn-link();
+    }
+  }
+  // spacing
+  & + .block,
+  .block + .block {
+    .margin(top, big);
+  }
+  // block
+  .block-title {
+    .display(flex);
+    .align-items-center();
+    .justify-content-between();
+    .h4();
+    .action {
+      .btn();
+      .btn-secondary();
+      .btn-tiny();
+    }
+  }
+  .block-content {
+    .flex();
+    > .box {
+      .all(12);
+      .min(sm, 6);
+      &.box-items {
+        .min(sm, 12);
+      }
+      // reset box
+      border-color: transparent;
+      background-color: transparent;
+      color: inherit;
+    }
+  }
+  // box
+  .box-title {
+    .display(inline-block);
+    .h6();
+  }
+  .box-content {
+    .box();
+    .box-small();
+  }
+}
+
+// others
+
+.form-address-edit,
+.form-edit-account,
+.form-newsletter-manage {
+  .box();
+  .box-big();
+}
+
+.block-addresses-default {
+  .block-content {
+    .flex();
+    .align-items-stretch();
+  }
+  // content
+  .block-title {
+    .h4();
+  }
+}
+
+//////////////////////
+// dashboard sidebar
+//////////////////////
+
+// .block-collapsible-nav
+
+.block-collapsible-nav {
+  .title {
+    .display(none, sm);
+    .block();
+    .btn();
+    .btn-secondary();
+    .btn-caret();
+  }
+  .content {
+    .display(none);
+    .display(block, sm);
+    .margin(y, medium);
+    &.active {
+      .display(block);
+      // animations
+      .anim-vertical();
+      .anim-vertical.fade-in();
+    }
+    // content
+    > ul {
+      .list-block();
+      .list-space(tiny);
+      .list-small();
+      .list-none();
+      .list-link();
+    }
+    .item.current > * {
+      .btn();
+      .btn-link();
+      .btn-small();
+      .btn-none();
+      .font-sans-bold() !important;
+      strong {
+        font-weight: inherit;
+      }
+    }
+    .delimiter {
+      .block();
+      .margin(y, small);
+      border-top: 1px solid @grey-250;
+    }
+  }
+}

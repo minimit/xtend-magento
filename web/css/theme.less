@@ -1,0 +1,46 @@
+//////////////////////
+// xtend
+//////////////////////
+
+@import '../../../../../../../node_modules/xtend-library/core/__core';
+// to customize theme, copy and paste node_modules/xtend-library/theme/ inside /web
+// @import '../xtend-library/theme/__theme';
+@import '../../../../../../../node_modules/xtend-library/theme/__theme';
+
+// set to false to use only mixins
+
+@generate-grid: true;
+@generate-utils: true;
+@generate-margins: true;
+@generate-paddings: true;
+@generate-structure: true;
+@generate-flex-utils: true;
+@generate-breakpoints: sm, md, lg; // only for this breakpoints (set to false to not generate responsive classes)
+
+//////////////////////
+// includes
+//////////////////////
+
+// modules
+
+@import 'modules/_catalog';
+@import 'modules/_catalog-gallery';
+@import 'modules/_catalog-search';
+@import 'modules/_checkout';
+@import 'modules/_customer';
+@import 'modules/_gift';
+@import 'modules/_layered-navigation';
+@import 'modules/_newsletter';
+@import 'modules/_review';
+@import 'modules/_sales';
+@import 'modules/_swatches';
+@import 'modules/_various';
+@import 'modules/_wishlist';
+
+// custom
+
+@import '_layout';
+@import '_shared';
+@import '_header';
+@import '_footer';
+@import '_xtend2mage';
