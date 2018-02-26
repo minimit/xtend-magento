@@ -3,13 +3,14 @@
 
 # Installation
 
+You can install with one of the following:
 * download: [latest release.](https://github.com/minimit/xtend-magento/releases/latest)
 * git: `git clone https://github.com/minimit/xtend-magento.git`
 * composer: `composer require minimit/xtend-magento`, then copy assets `cp -r composer/xtend-magento/css/ 
 app/design/frontend/<vendor>/<theme/web/css/`
 
-You also need to install Xtend library:
-
+You also need to install Xtend library.
+You can install with one of the following:
 * download: [latest release.](https://github.com/minimit/xtend/releases/latest)
 * git: `git clone https://github.com/minimit/xtend.git`
 * npm: `npm install xtend-library --save`, then copy assets `cp -r node_modules/xtend-library/ 
