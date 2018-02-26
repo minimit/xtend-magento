@@ -13,8 +13,9 @@ You also need to install Xtend library.
 You can install with one of the following:
 * download: [latest release.](https://github.com/minimit/xtend/releases/latest)
 * git: `git clone https://github.com/minimit/xtend.git`
+* yarn: `yarn install --modules-folder ./web`
 * npm: `npm install xtend-library --save`, then copy assets `cp -r node_modules/xtend-library/ 
-app/design/frontend/<vendor>/<theme>/web/xtend-library/`
+/web/xtend-library/`
 
 # Copyright
 

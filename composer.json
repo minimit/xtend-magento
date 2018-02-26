@@ -1,6 +1,6 @@
 {
   "name": "minimit/xtend-magento",
-  "description": "Xtend theme",
+  "description": "Xtend theme for magento2",
   "require": {
     "php": "~5.6.0|~7.0.0|~7.1.0",
     "magento/theme-frontend-luma": ">=100.0.0"
