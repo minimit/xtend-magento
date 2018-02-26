@@ -5,7 +5,8 @@
 
 * download: [latest release.](https://github.com/minimit/xtend-magento/releases/latest)
 * git: `git clone https://github.com/minimit/xtend-magento.git`
-* composer: ``, then copy assets ``
+* composer: `composer require minimit/xtend-magento`, then copy assets `cp -r composer/xtend-magento/css/ 
+app/design/frontend/<vendor>/<theme/web/css/`
 
 # Copyright
 

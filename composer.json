@@ -1,5 +1,5 @@
 {
-  "name": "Webgriffe/xtend",
+  "name": "Minimit/xtend-magento",
   "description": "Xtend theme",
   "require": {
     "php": "~5.6.0|~7.0.0|~7.1.0",
