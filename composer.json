@@ -6,7 +6,7 @@
     "magento/theme-frontend-luma": ">=100.0.0"
   },
   "type": "magento2-theme",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "license": [
     "MIT"
   ],
