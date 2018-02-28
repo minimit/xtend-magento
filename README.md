@@ -8,8 +8,7 @@ You can install with one of the following:
 * git: `git clone https://github.com/minimit/xtend-magento.git`.
 * composer: `composer require minimit/xtend-magento`.
 
-If you don't use composer, you need to install also [Xtend library](https://github
-.com/minimit/xtend-library#installation).
+If you don't use composer, you need to install also [Xtend library](https://github.com/minimit/xtend-library#installation).
 
 ### Theming
 
