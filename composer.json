@@ -2,7 +2,6 @@
   "name": "minimit/xtend-magento",
   "description": "Xtend theme for magento2",
   "type": "magento2-theme",
-  "version": "1.0.0",
   "license": [
     "MIT"
   ],
