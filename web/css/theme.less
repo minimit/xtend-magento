@@ -2,25 +2,8 @@
 // xtend
 //////////////////////
 
-// core
-
-@corePath: '../../vendor/minimit/xtend/'; // for theming use the package path here
-@import '@{corePath}styles/__core';
-
-// theme
-
-@themePath: '../../vendor/minimit/xtend/dist/'; // for theming use '../../xtend-library/'
-@import '@{themePath}styles/__theme';
-
-// set to false to use only mixins
-
-@generate-grid: true;
-@generate-utils: true;
-@generate-margins: true;
-@generate-paddings: true;
-@generate-structure: true;
-@generate-flex-utils: true;
-@generate-breakpoints: sm, md, lg; // only for this breakpoints (set to false to not generate responsive classes)
+@themePath: '../../vendor/minimit/xtend-library/dist/'; // for theming use '../xtend-library/'
+@import '@{themePath}styles/xtend';
 
 //////////////////////
 // includes
