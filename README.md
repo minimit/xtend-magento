@@ -10,7 +10,7 @@ You can install with one of the following:
 
 ### Theming
 
-You need to copy Xtend magento `/web` to customize the files.
+You need to copy xtend-magento `/web` to customize the files.
 
 If you install with composer:
 ```
@@ -18,12 +18,12 @@ mkdir -p app/design/frontend/<vendor>/<theme>/web/
 cp -r vendor/minimit/xtend-magento/web/ app/design/frontend/<vendor>/<theme>/web/
 ```
 
-You need to copy Xtend library `/dist` to customize the files.
+You need to copy xtend-library `/dist` to customize the files.
 
 If you install with composer:
 ```
 mkdir -p app/design/frontend/<vendor>/<theme>/web/xtend-library/
-cp -r vendor/minimit/xtend/dist/ app/design/frontend/<vendor>/<theme>/web/xtend-library/
+cp -r vendor/minimit/xtend-library/dist/ app/design/frontend/<vendor>/<theme>/web/xtend-library/
 ```
 
 # Copyright
