@@ -10,19 +10,21 @@ You can install with one of the following:
 
 ### Theming
 
-If you install with composer, you need to copy `web/` to customize the files:
+You need to copy Xtend magento `/web` to customize the files.
+
+If you install with composer:
 ```
-mkdir -p app/design/frontend/vendor/theme/web/
+mkdir -p app/design/frontend/<vendor>/<theme>/web/
 cp -r vendor/minimit/xtend-magento/web/ app/design/frontend/<vendor>/<theme>/web/
 ```
 
-### Library
+You need to copy Xtend library `/dist` to customize the files.
 
-You also need to install Xtend library, use the [xtend installation procedure](https://github.com/minimit/xtend#installation) from 
-within your theme folder.
-
-If you install with yarn or npm, you need to copy `/dist` to customize the files:
-`cp -r node_modules/xtend-library/dist/ xtend-library/`
+If you install with composer:
+```
+mkdir -p app/design/frontend/<vendor>/<theme>/web/xtend-library/
+cp -r vendor/minimit/xtend/dist/ app/design/frontend/<vendor>/<theme>/web/xtend-library/
+```
 
 # Copyright
 
