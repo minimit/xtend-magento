@@ -2,8 +2,27 @@
 // xtend
 //////////////////////
 
-@themePath: '../../vendor/minimit/xtend-library/dist/'; // for theming use '../xtend-library/'
-@import '@{themePath}styles/xtend';
+// core
+
+@import (optional) '../../vendor/minimit/xtend-library/styles/__core'; // dev
+@import (optional) '../../../xtend-library/styles/__core'; // composer
+@import (optional) '../../../../../../../vendor/minimit/xtend-library/styles/__core'; // theming
+
+// theme
+
+@import (optional) '../../vendor/minimit/xtend-library/dist/styles/__theme'; // dev
+@import (optional) '../../../xtend-library/dist/styles/__theme'; // composer
+@import (optional) '../xtend-library/styles/__theme'; // theming
+
+// set to false to use only mixins
+
+@generate-grid: true;
+@generate-utils: true;
+@generate-margins: true;
+@generate-paddings: true;
+@generate-structure: true;
+@generate-flex-utils: true;
+@generate-breakpoints: sm, md, lg; // only for this breakpoints (set to false to not generate responsive classes)
 
 //////////////////////
 // includes
