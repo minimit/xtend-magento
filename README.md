@@ -14,7 +14,7 @@ If you don't use composer, you need to install also [Xtend library](https://gith
 
 You need to copy xtend-magento **/web** to customize the files.
 
-If you install with **composer**:
+If you installed with **composer**:
 ```
 mkdir -p app/design/frontend/<vendor>/<theme>/web/
 cp -r vendor/minimit/xtend-magento/web/ app/design/frontend/<vendor>/<theme>/web/
@@ -22,13 +22,13 @@ cp -r vendor/minimit/xtend-magento/web/ app/design/frontend/<vendor>/<theme>/web
 
 You need to copy xtend-library **/dist** to customize the files.
 
-If you install with **composer**:
+If you installed with **composer**:
 ```
 mkdir -p app/design/frontend/<vendor>/<theme>/web/xtend-library/
 cp -r vendor/minimit/xtend-library/dist/ app/design/frontend/<vendor>/<theme>/web/xtend-library/
 ```
 
-After in `xtend.less` put the right path for the **@imports**.
+After in `theme.less` put the right path for the **@imports**.
 
 # Copyright
 
