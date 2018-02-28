@@ -28,6 +28,8 @@ mkdir -p app/design/frontend/<vendor>/<theme>/web/xtend-library/
 cp -r vendor/minimit/xtend-library/dist/ app/design/frontend/<vendor>/<theme>/web/xtend-library/
 ```
 
+After in `theme.less` put the right path for the `@import`.
+
 # Copyright
 
 Copyright © 2017-2018 Riccardo Caroli. Licensed under [MIT license](http://www.opensource.org/licenses/mit-license.php).
