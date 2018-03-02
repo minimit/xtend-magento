@@ -1,0 +1,40 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "60612ba55bc2a67eb1f071d3fb46e6ac",
+    "packages": [
+        {
+            "name": "minimit/xtend-library",
+            "version": "v0.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/minimit/xtend-library.git",
+                "reference": "be286b7a6f1b7bf9ceedfd71c6099dd04c3df043"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/minimit/xtend-library/zipball/be286b7a6f1b7bf9ceedfd71c6099dd04c3df043",
+                "reference": "be286b7a6f1b7bf9ceedfd71c6099dd04c3df043",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Frontend library",
+            "time": "2018-03-02T16:46:50+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
