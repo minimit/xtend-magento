@@ -1,18 +1,18 @@
 var config = {
-    config: {
-        mixins: {
-            "mage/menu": {
-                'Magento_Ui/js/model/menu-mixin': true
-            },
-            "mage/dropdown": {
-                'Magento_Ui/js/model/dropdown-mixin': true
-            },
-            'Magento_Ui/js/modal/modal': {
-                'Magento_Ui/js/model/modal-mixin': true
-            },
-            "mage/collapsible": {
-                'Magento_Ui/js/model/collapsible-mixin': true
-            },
-        }
+  config: {
+    mixins: {
+      "mage/menu": {
+        'Magento_Ui/js/model/menu-mixin': true
+      },
+      "mage/dropdown": {
+        'Magento_Ui/js/model/dropdown-mixin': true
+      },
+      'Magento_Ui/js/modal/modal': {
+        'Magento_Ui/js/model/modal-mixin': true
+      },
+      "mage/collapsible": {
+        'Magento_Ui/js/model/collapsible-mixin': true
+      },
     }
+  }
 };
