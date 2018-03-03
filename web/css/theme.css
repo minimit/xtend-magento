@@ -4465,13 +4465,6 @@ textarea ~ .input-group-stack .btn,
 /* NEEDS: fonts css
 <link rel="stylesheet" src="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700"/>
 */
-@font-face {
-  font-family: 'luma-icons';
-  src: url('../icons/Luma-Icons.eot');
-  src: url('../icons/Luma-Icons.eot?#iefix') format('embedded-opentype'), url('../icons/Luma-Icons.woff2') format('woff2'), url('../icons/Luma-Icons.woff') format('woff'), url('../icons/Luma-Icons.ttf') format('truetype'), url('../icons/Luma-Icons.svg#luma-icons') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
 @keyframes anim-bottom-in {
   0% {
     opacity: 0;

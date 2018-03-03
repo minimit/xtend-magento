@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "minimit/xtend-library",
-            "version": "v0.0.5",
+            "version": "v0.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/minimit/xtend-library.git",
-                "reference": "be286b7a6f1b7bf9ceedfd71c6099dd04c3df043"
+                "reference": "d7eb366b1e600dfa361235fb6612eb8b7e074651"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/minimit/xtend-library/zipball/be286b7a6f1b7bf9ceedfd71c6099dd04c3df043",
-                "reference": "be286b7a6f1b7bf9ceedfd71c6099dd04c3df043",
+                "url": "https://api.github.com/repos/minimit/xtend-library/zipball/d7eb366b1e600dfa361235fb6612eb8b7e074651",
+                "reference": "d7eb366b1e600dfa361235fb6612eb8b7e074651",
                 "shasum": ""
             },
             "type": "library",
@@ -26,7 +26,7 @@
                 "MIT"
             ],
             "description": "Frontend library",
-            "time": "2018-03-02T16:46:50+00:00"
+            "time": "2018-03-03T10:55:01+00:00"
         }
     ],
     "packages-dev": [],
