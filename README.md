@@ -32,5 +32,5 @@ After in `theme.less` put the right path for the **@imports**.
 
 # Copyright
 
-Copyright © 2017-2018 Riccardo Caroli. Licensed under [MIT license](http://www.opensource.org/licenses/mit-license.php).
+Licensed under [MIT license](https://github.com/minimit/xtend-magento/blob/master/LICENSE).
 
