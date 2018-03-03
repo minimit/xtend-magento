@@ -6439,6 +6439,13 @@ input[type="radio"] + label > span {
 .box-light table.table-checkout-shipping-method tr td {
   border-color: #dce8ee !important;
 }
+@font-face {
+  font-family: 'luma-icons';
+  src: url('../icons/Luma-Icons.eot');
+  src: url('../icons/Luma-Icons.eot?#iefix') format('embedded-opentype'), url('../icons/Luma-Icons.woff2') format('woff2'), url('../icons/Luma-Icons.woff') format('woff'), url('../icons/Luma-Icons.ttf') format('truetype'), url('../icons/Luma-Icons.svg#luma-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 .products ol.product-items {
   display: -webkit-box;
   display: -ms-flexbox;
