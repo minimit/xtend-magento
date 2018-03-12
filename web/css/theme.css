@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 html,
 body {
   height: 100%;
@@ -4462,9 +4463,6 @@ textarea ~ .input-group-stack .btn,
     order: 5 !important;
   }
 }
-/* NEEDS: fonts css
-<link rel="stylesheet" src="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700"/>
-*/
 @keyframes anim-bottom-in {
   0% {
     opacity: 0;
@@ -4675,7 +4673,6 @@ small {
 }
 code {
   padding: .187rem .375rem;
-  background-color: #edf3f6;
   font-family: monaco, Consolas, 'Lucida Console', monospace;
   font-weight: normal;
   font-style: normal;
@@ -4684,7 +4681,7 @@ code {
 }
 pre code {
   margin-bottom: 1.5rem;
-  font-size: .812rem;
+  font-size: 12px;
   line-height: 1.6;
 }
 pre code:first-child {
