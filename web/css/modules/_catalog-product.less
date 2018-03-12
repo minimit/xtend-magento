@@ -1,0 +1,108 @@
+//////////////////////
+// product
+//////////////////////
+
+// .product-info-price
+
+.product-info-price {
+  .margin(top, small) !important;
+  .display(flex);
+  .flex-space(small);
+  .justify-content-between();
+}
+
+// .product-info-stock-sku
+
+.product-info-stock-sku {
+  .font-small();
+  color: @grey-500;
+  white-space: nowrap;
+  .stock {
+    .font-sans-semibold();
+  }
+  .sku {
+    .type {
+      .font-sans-semibold();
+    }
+    .value {
+      .display(inline-block);
+      .text(right);
+    }
+  }
+}
+
+// .product-add-form
+
+.product-add-form {
+  .box();
+  .margin(top, medium);
+  .margin(bottom, medium);
+  // content
+  .box-tocart {
+    .margin(top, medium);
+    .action.tocart {
+      .btn-giant();
+      @media @max-sm {
+        .block();
+        .text(center);
+      }
+    }
+  }
+}
+
+// .product-social-links
+
+.product-social-links {
+  .flex();
+  .flex-space(small);
+  .align-items-center();
+  .justify-content-between();
+  // content
+  .action.towishlist,
+  .action.tocompare,
+  .action.mailto {
+    .btn();
+    .btn-small();
+    .btn-icon();
+    .btn-secondary-alt();
+  }
+  .action.towishlist {
+    .icon(@icon-wishlist, @icon-big);
+  }
+  .action.tocompare {
+    .icon(@icon-compare, @icon-big);
+  }
+  .action.mailto {
+    .icon(@icon-envelope, @icon-big);
+  }
+}
+
+// .product.data
+
+.product.data {
+  .list-line();
+  .list-space(small);
+  .item.title {
+    @media @min-sm {
+      width: auto;
+      .flex-order(1);
+    }
+    .switch {
+      .btn();
+      .btn-secondary();
+      .block();
+      .text(center);
+      border-radius: 0;
+      .counter {
+        .font-sans-bold();
+        color: @primary;
+      }
+    }
+  }
+  .item.content {
+    .box();
+    @media @min-sm {
+      .flex-order(2);
+    }
+  }
+}

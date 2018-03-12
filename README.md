@@ -30,6 +30,32 @@ cp -r vendor/minimit/xtend-library/dist/ app/design/frontend/<vendor>/<theme>/we
 
 After in `theme.less` put the right path for the **@imports**.
 
+### Compiling Less
+
+Set grunt compilation for `theme.less`. Add this code to `dev/tools/grunt/configs/local-themes.js`:
+
+```
+'use strict';
+
+module.exports = {
+    '<theme>': {
+        area: 'frontend',
+        name: '<vendor>/<theme>',
+        locale: 'en_US',
+        files: [
+            'css/theme'
+        ],
+        dsl: 'less'
+    }
+};
+```
+
+To compile run this command:
+
+```
+grunt exec:<theme> && grunt less:<theme> && grunt watch
+```
+
 # Copyright
 
 Licensed under [MIT license](https://github.com/minimit/xtend-magento/blob/master/LICENSE).
