@@ -34,7 +34,7 @@ button,
   &:extend(.drop-outer all);
   &.active {
     .ui-dialog {
-      &:extend(.drop.fade-in all);
+      &:extend(.drop.active all);
     }
   }
 }
@@ -94,10 +94,10 @@ ul.dropdown { // ul.dropdown is store and language etc..
   &._show {
     &:extend(.overlay.active all);
     .modal-inner-wrap {
-      &:extend(.overlay .overlay-content.fade-in all);
+      &:extend(.overlay .overlay-content.active all);
     }
     .modals-overlay {
-      &:extend(.xt-backdrop.fade-in all);
+      &:extend(.xt-backdrop.active all);
     }
   }
   .action-close {

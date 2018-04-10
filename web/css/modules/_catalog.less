@@ -122,15 +122,17 @@
         .btn();
         .btn-tiny();
         .btn-icon();
-        .btn-secondary-alt();
-        .icon(@icon-wishlist, @icon-big);
+        .btn-secondary-empty();
+        .by-key(@icons, wishlist);
+        .icon(@content:@by-key, @size:@icon-big, @sr-only:true);
       }
       .action.tocompare {
         .btn();
         .btn-tiny();
         .btn-icon();
-        .btn-secondary-alt();
-        .icon(@icon-compare, @icon-big);
+        .btn-secondary-empty();
+        .by-key(@icons, compare);
+        .icon(@content:@by-key, @size:@icon-big, @sr-only:true);
       }
     }
   }

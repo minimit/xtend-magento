@@ -15,7 +15,8 @@
     .btn-tiny();
     .btn-icon();
     .btn-link();
-    .icon(@icon-trash, @icon-medium);
+    .by-key(@icons, trash);
+    .icon(@content:@by-key, @size:@icon-medium, @sr-only:true);
   }
   .actions-toolbar {
     .action {
@@ -53,7 +54,8 @@
       .btn();
       .btn-icon();
       .btn-secondary();
-      .icon(@icon-trash, @icon-medium);
+      .by-key(@icons, trash);
+      .icon(@content:@by-key, @size:@icon-medium, @sr-only:true);
     }
   }
   .product-item-actions {
@@ -72,7 +74,8 @@
     }
     .action.towishlist {
       .btn-icon();
-      .icon(@icon-wishlist, @icon-big);
+      .by-key(@icons, wishlist);
+      .icon(@content:@by-key, @size:@icon-big, @sr-only:true);
     }
   }
 }

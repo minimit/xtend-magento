@@ -91,7 +91,7 @@
         border-radius: 50%;
         border: 1px solid @grey-250;
         background-color: @white;
-        .font-sans-bold();
+        .font-sans-semibold();
         font-size: 16px !important;
         color: @grey-500;
         line-height: 1.5 !important;
@@ -114,7 +114,8 @@
         background-color: @primary;
       }
       span {
-        .icon(@icon-checkmark, @icon-medium, false, after);
+        .by-key(@icons, checkmark);
+        .icon(@content:@by-key, @size:@icon-medium, @sr-only:false, @position:after);
         &:before {
           border: 1px solid @primary;
           background-color: @primary;

@@ -21,7 +21,7 @@
     // animations
     &._active {
       .anim-vertical();
-      .anim-vertical.fade-in();
+      .anim-vertical.active();
     }
   }
   .action {
@@ -48,7 +48,7 @@
       .display(block);
       // animations
       .anim-vertical();
-      .anim-vertical.fade-in();
+      .anim-vertical.active();
     }
     .gift-options {
       margin-top: .75rem;
@@ -91,16 +91,19 @@
     .btn();
     .btn-tiny();
     .btn-icon();
-    .btn-secondary-alt();
+    .btn-secondary-empty();
     .flex-order(0);
   }
   .action-edit {
-    .icon(@icon-edit, @icon-medium);
+    .by-key(@icons, edit);
+    .icon(@content:@by-key, @size:@icon-medium, @sr-only:true);
   }
   .action-delete {
-    .icon(@icon-trash, @icon-medium);
+    .by-key(@icons, trash);
+    .icon(@content:@by-key, @size:@icon-medium, @sr-only:true);
   }
   .action-towishlist {
-    .icon(@icon-wishlist, @icon-medium);
+    .by-key(@icons, wishlist);
+    .icon(@content:@by-key, @size:@icon-medium, @sr-only:true);
   }
 }

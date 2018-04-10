@@ -93,7 +93,8 @@
     }
     .action.delete {
       .btn-icon();
-      .icon(@icon-trash, @icon-medium);
+      .by-key(@icons, trash);
+      .icon(@content:@by-key, @icon-medium, @sr-only:true);
     }
   }
 }
@@ -147,15 +148,17 @@
       .btn();
       .btn-tiny();
       .btn-icon();
-      .btn-secondary-alt();
-      .icon(@icon-edit, @icon-big);
+      .btn-secondary-empty();
+      .by-key(@icons, edit);
+      .icon(@content:@by-key, @icon-big, @sr-only:true);
     }
     .action.delete {
       .btn();
       .btn-tiny();
       .btn-icon();
-      .btn-secondary-alt();
-      .icon(@icon-trash, @icon-big);
+      .btn-secondary-empty();
+      .by-key(@icons, trash);
+      .icon(@content:@by-key, @icon-big, @sr-only:true);
     }
   }
 }

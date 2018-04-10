@@ -23,7 +23,8 @@
     .btn-small();
     .btn-icon();
     .btn-primary();
-    .icon(@icon-cart, @icon-big, false);
+    .by-key(@icons, cart);
+    .icon(@content:@by-key, @size:@icon-big, @sr-only:false);
     .text,
     .counter-label {
       .sr-only();
@@ -66,7 +67,7 @@
   > .items-total {
     .font-small();
     .count {
-      .font-sans-bold();
+      .font-sans-semibold();
     }
   }
   > .subtotal {
@@ -193,13 +194,15 @@ ol.minicart-items {
         .btn();
         .btn-small();
         .btn-icon();
-        .btn-secondary-alt();
+        .btn-secondary-empty();
       }
       .action.edit {
-        .icon(@icon-edit, @icon-medium);
+        .by-key(@icons, edit);
+        .icon(@content:@by-key, @size:@icon-medium, @sr-only:true);
       }
       .action.delete {
-        .icon(@icon-trash, @icon-medium);
+        .by-key(@icons, trash);
+        .icon(@content:@by-key, @size:@icon-medium, @sr-only:true);
       }
     }
   }

@@ -25,10 +25,12 @@
     .btn-small();
     .btn-icon();
     .btn-primary();
-    .icon(@icon-menu, @icon-big);
+    .by-key(@icons, menu);
+    .icon(@content:@by-key, @size:@icon-big, @sr-only:true);
     html.nav-open & {
       .btn-primary.active();
-      .icon(@icon-close, @icon-big);
+      .by-key(@icons, close);
+      .icon(@content:@by-key, @size:@icon-big, @sr-only:true);
     }
   }
 }
@@ -118,7 +120,7 @@
     .list-block();
     .list-small();
     .list-squared();
-    .list-secondary-alt();
+    .list-secondary-empty();
     display: none;
     position: absolute;
     z-index: 1;
@@ -191,7 +193,7 @@
     .list-big();
     .list-wide();
     .list-squared();
-    .list-secondary-alt();
+    .list-secondary-empty();
     > li.level-top {
       &.active {
         background-color: @grey-250;
@@ -202,7 +204,7 @@
     .list-block();
     .list-small();
     .list-narrow();
-    .list-secondary-alt();
+    .list-secondary-empty();
     top: 0 !important;
     left: 0 !important;
     .padding(all, 1.5rem);
@@ -221,7 +223,7 @@
       .btn-big();
       .btn-wide();
       .btn-squared();
-      .btn-secondary-alt();
+      .btn-secondary-empty();
     }
     .drop {
       .drop-top();
@@ -297,7 +299,7 @@ html.nav-open {
   }
   .header-mobile-backdrop {
     .anim-backdrop();
-    .anim-backdrop.fade-in();
+    .anim-backdrop.active();
   }
 }
 @keyframes anim-header {
