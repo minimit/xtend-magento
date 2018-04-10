@@ -1,4 +1,4 @@
-/*! xtend v0.1.5 (https://getxtend.com/)
+/*! xtend v0.1.6 (https://getxtend.com/)
 @copyright (c) 2017 - 2018 Riccardo Caroli
 @license MIT (https://github.com/minimit/xtend-library/blob/master/LICENSE) */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
@@ -4776,7 +4776,7 @@ html.xt-fixed .modal-popup {
  * @param {String} @position Can be 'top' or 'bottom'
  * @param {Value} @pos Position value
  */
-/*! xtend v0.1.5 (https://getxtend.com/)
+/*! xtend v0.1.6 (https://getxtend.com/)
 @copyright (c) 2017 - 2018 Riccardo Caroli
 @license MIT (https://github.com/minimit/xtend-library/blob/master/LICENSE) */
 .flex {
@@ -5410,10 +5410,10 @@ dl dt {
   font-size: 2em;
 }
 .icon-left {
-  margin-right: 0.5em;
+  margin-right: 1em;
 }
 .icon-right {
-  margin-left: 0.5em;
+  margin-left: 1em;
 }
 .table tr,
 .table-checkout-shipping-method tr {
@@ -6405,7 +6405,7 @@ button.alink,
   font-size: 0.75em;
 }
 .btn-caret:after {
-  margin-left: 0.5em;
+  margin-left: 1em;
 }
 .btn-caret.active:after {
   display: inline-block;
@@ -9132,7 +9132,7 @@ textarea ~ .block-search .block-content form .actions .btn,
   font-size: 0.75em;
 }
 .opc-block-summary .items-in-cart .title:after {
-  margin-left: 0.5em;
+  margin-left: 1em;
 }
 .opc-block-summary .items-in-cart .title.active:after {
   display: inline-block;
@@ -9491,7 +9491,7 @@ textarea ~ .block-search .block-content form .actions .btn,
   font-size: 0.75em;
 }
 .discount-code .choice:after {
-  margin-left: 0.5em;
+  margin-left: 1em;
 }
 .discount-code .choice.active:after {
   display: inline-block;
@@ -10127,7 +10127,7 @@ textarea ~ .block-search .block-content form .actions .btn,
   font-size: 0.75em;
 }
 .cart-summary .block.shipping .title:after {
-  margin-left: 0.5em;
+  margin-left: 1em;
 }
 .cart-summary .block.shipping .title.active:after {
   display: inline-block;
@@ -10846,7 +10846,7 @@ textarea ~ .block-search .block-content form .actions .btn,
   font-size: 0.75em;
 }
 .block.discount .title:after {
-  margin-left: 0.5em;
+  margin-left: 1em;
 }
 .block.discount .title.active:after {
   display: inline-block;
@@ -11448,7 +11448,7 @@ ol.minicart-items .product-item-details > .options .toggle:after {
   font-size: 0.75em;
 }
 ol.minicart-items .product-item-details > .options .toggle:after {
-  margin-left: 0.5em;
+  margin-left: 1em;
 }
 ol.minicart-items .product-item-details > .options .toggle.active:after {
   display: inline-block;
@@ -12899,7 +12899,7 @@ ol.minicart-items .product-item-details .actions .action.delete:before {
   font-size: 0.75em;
 }
 .block-collapsible-nav .title:after {
-  margin-left: 0.5em;
+  margin-left: 1em;
 }
 .block-collapsible-nav .title.active:after {
   display: inline-block;
@@ -13194,7 +13194,7 @@ ol.minicart-items .product-item-details .actions .action.delete:before {
   font-size: 0.75em;
 }
 .gift-item-block .title:after {
-  margin-left: 0.5em;
+  margin-left: 1em;
 }
 .gift-item-block .title.active:after {
   display: inline-block;
@@ -13624,7 +13624,7 @@ ol.minicart-items .product-item-details .actions .action.delete:before {
   font-size: 0.75em;
 }
 .filter .block-title:after {
-  margin-left: 0.5em;
+  margin-left: 1em;
 }
 .filter .block-title.active:after {
   display: inline-block;
@@ -13833,7 +13833,7 @@ ol.minicart-items .product-item-details .actions .action.delete:before {
   font-size: 0.75em;
 }
 .filter-options .filter-options-item .filter-options-title:after {
-  margin-left: 0.5em;
+  margin-left: 1em;
 }
 .filter-options .filter-options-item .filter-options-title.active:after {
   display: inline-block;
@@ -20808,7 +20808,7 @@ html.nav-open .header-mobile-backdrop.out {
 .footer-content .store-wrapper > button:after,
 .footer-content .language-wrapper > button:after,
 .footer-content .currency-wrapper > button:after {
-  margin-left: 0.5em;
+  margin-left: 1em;
 }
 .footer-content .store-wrapper > button.active:after,
 .footer-content .language-wrapper > button.active:after,

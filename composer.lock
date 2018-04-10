@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6d2d96408412aec5b086f030fcf18c3f",
+    "content-hash": "fd97348810ebb2a9920ace1077d511bd",
     "packages": [
         {
             "name": "minimit/xtend-library",
-            "version": "v0.1.5",
+            "version": "v0.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/minimit/xtend-library.git",
-                "reference": "5246512675af9e239a9f71a1d65f4de5a3afc1d9"
+                "reference": "898080e0bbd2cdcb732cfd4712f14fbb75f40469"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/minimit/xtend-library/zipball/5246512675af9e239a9f71a1d65f4de5a3afc1d9",
-                "reference": "5246512675af9e239a9f71a1d65f4de5a3afc1d9",
+                "url": "https://api.github.com/repos/minimit/xtend-library/zipball/898080e0bbd2cdcb732cfd4712f14fbb75f40469",
+                "reference": "898080e0bbd2cdcb732cfd4712f14fbb75f40469",
                 "shasum": ""
             },
             "type": "library",
@@ -26,7 +26,7 @@
                 "MIT"
             ],
             "description": "Frontend library",
-            "time": "2018-04-10T13:51:57+00:00"
+            "time": "2018-04-10T15:16:33+00:00"
         }
     ],
     "packages-dev": [],
