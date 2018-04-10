@@ -28,7 +28,7 @@ mkdir -p app/design/frontend/<vendor>/<theme>/web/xtend-library/
 cp -r vendor/minimit/xtend-library/dist/ app/design/frontend/<vendor>/<theme>/web/xtend-library/
 ```
 
-After in `theme.less` put the right path for the **@imports**.
+After in `theme.less` put the right path to `'xtend-library/dist/'` in **@xtend-dist**.
 
 ### Compiling Less
 
