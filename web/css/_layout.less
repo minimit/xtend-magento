@@ -20,10 +20,10 @@
 .page-layout-checkout,
 .page-layout-full {
   .column.main {
-    .all(12);
+    .col(12);
   }
   .sidebar {
-    .all(12);
+    .col(12);
   }
 }
 
@@ -32,14 +32,14 @@
 .page-layout-2columns-left,
 .page-layout-2columns-right {
   .column.main {
-    .all(12);
-    .min(sm, 8);
-    .min(md, 9);
+    .col(12);
+    .col(8, sm);
+    .col(9, md);
   }
   .sidebar {
-    .all(12);
-    .min(sm, 4);
-    .min(md, 3);
+    .col(12);
+    .col(4, sm);
+    .col(3, md);
   }
 }
 
@@ -115,19 +115,19 @@
     .flex-wrap();
   }
   .product-info-main {
-    .all(12);
-    .min(sm, 7);
-    .min(md, 5);
+    .col(12);
+    .col(7, sm);
+    .col(5, md);
     .flex-order(1);
   }
   .product.media {
-    .all(12);
-    .min(sm, 5);
-    .min(md, 7);
+    .col(12);
+    .col(5, sm);
+    .col(7, md);
     .flex-order(0);
   }
   .product.info {
-    .all(12);
+    .col(12);
     .flex-order(2);
   }
 }
@@ -143,20 +143,20 @@
   .flex-wrap();
   // sizes
   .form-cart {
-    .all(12);
-    .min(md, 8);
+    .col(12);
+    .col(8, md);
   }
   #gift-options-cart {
-    .all(12);
-    .min(md, 8);
+    .col(12);
+    .col(8, md);
   }
   .cart-discount {
-    .all(12);
-    .min(md, 8);
+    .col(12);
+    .col(8, md);
   }
   .cart-summary-outer {
-    .all(12);
-    .min(md, 4);
+    .col(12);
+    .col(4, md);
   }
   // order with float
   @media @min-md {
@@ -214,20 +214,20 @@
     .flex-wrap();
   }
   .opc-progress-bar {
-    .all(12);
-    .min(md, 8);
+    .col(12);
+    .col(8, md);
   }
   .opc-wrapper {
-    .all(12);
-    .min(md, 8);
+    .col(12);
+    .col(8, md);
   }
   .opc-estimated-wrapper {
-    .all(12);
-    .min(md, 4);
+    .col(12);
+    .col(4, md);
   }
   .opc-sidebar {
-    .all(12);
-    .min(md, 4);
+    .col(12);
+    .col(4, md);
   }
   // order with float
   @media @min-md {
@@ -265,7 +265,7 @@
 
 body:not(.page-layout-fullcolumn) {
   .main-container {
-    &:extend(.contain-fluid);
+    &:extend(.container-fluid);
   }
 }
 

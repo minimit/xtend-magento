@@ -11,6 +11,6 @@
     ]
   },
   "require": {
-    "minimit/xtend-library": "~0.1.6"
+    "minimit/xtend-library": "~0.2.0"
   }
 }

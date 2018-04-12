@@ -18,17 +18,17 @@
     .margin(top, big, sm);
     // column
     .products-grid& {
-      .all(6);
-      .min(sm, 6);
-      .min(md, 4);
+      .col(6);
+      .col(6, sm);
+      .col(4, md);
       .product-item-photo {
         .block();
         .margin(bottom, medium);
       }
     }
     .products-list& {
-      .all(12);
-      .min(md, 6);
+      .col(12);
+      .col(6, md);
       .product-item-info {
         .display(flex);
         .flex-row();
@@ -37,7 +37,7 @@
       }
       .product-item-photo {
         .padding(right, medium);
-        .all(4);
+        .col(4);
       }
     }
     // content

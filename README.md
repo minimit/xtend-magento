@@ -8,8 +8,6 @@ You can install with one of the following:
 * clone: `git clone https://github.com/minimit/xtend-magento.git`
 * [composer](https://getcomposer.org/): `composer require minimit/xtend-magento`
 
-If you don't use composer, you need to install also [Xtend library](https://github.com/minimit/xtend-library#installation).
-
 ### Theming
 
 You need to copy xtend-magento **/web** to customize the files.
@@ -24,11 +22,13 @@ You need to copy xtend-library **/dist** to customize the files.
 
 If you installed with **composer**:
 ```
-mkdir -p app/design/frontend/<vendor>/<theme>/web/xtend-library/
-cp -r vendor/minimit/xtend-library/dist/ app/design/frontend/<vendor>/<theme>/web/xtend-library/
+mkdir -p app/design/frontend/<vendor>/<theme>/web/
+cp -r vendor/minimit/xtend-library/dist/ app/design/frontend/<vendor>/<theme>/web/
 ```
 
-After in `theme.less` put the right path to `'xtend-library/dist/'` in **@xtend-dist**.
+Then you also need to copy xtend-library in **/web** [Xtend library](https://github.com/minimit/xtend-library#theming).
+
+After in `theme.less` put the right path to the `@import` of core and theme.
 
 ### Compiling Less
 

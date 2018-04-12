@@ -28,7 +28,7 @@
         <referenceContainer name="page.wrapper">
             <container name="breadcrumbs.wrapper" htmlTag="div" htmlClass="breadcrumbs-wrapper"
                        after="header.container">
-                <container name="breadcrumbs.inner" htmlTag="div" htmlClass="contain-fluid"/>
+                <container name="breadcrumbs.inner" htmlTag="div" htmlClass="container-fluid"/>
             </container>
         </referenceContainer>
 
