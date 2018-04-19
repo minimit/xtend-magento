@@ -29,7 +29,7 @@
 // .product-items
 
 .block-wishlist ol.product-items {
-  .list-block;
+  .list();
   .list-space(small);
   // content
   .product-item + .product-item {
@@ -50,11 +50,11 @@
   @media @min-sm {
     .product-item-photo {
       .col(3);
-      .flex-order(2);
+      .order(2);
     }
     .product-item-details {
       .col(9);
-      .flex-order(1);
+      .order(1);
     }
   }
   .product-image-container {
@@ -81,7 +81,8 @@
   // actions
   .product-item-actions {
     .padding(top, tiny);
-    .list-line;
+    .list();
+    .list-line();
     .list-space(small);
     .action {
       .btn();

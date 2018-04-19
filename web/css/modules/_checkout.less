@@ -30,8 +30,8 @@
     .block-title {
       .h3();
     }
-    .modal-inner-wrap {
-     .overlay-tiny .overlay-content();
+    .modal-outer-wrap {
+      .overlay-width-tiny();
     }
   }
 }
@@ -142,6 +142,7 @@
 
 .opc-block-summary {
   .box();
+  .box-default();
   > .title {
     .display(inline-block);
     .h4();
@@ -154,7 +155,7 @@
     }
     &.active {
       .title {
-        .btn-caret.active();
+        .btn.btn-caret.active();
       }
     }
     > .content {
@@ -195,6 +196,7 @@
     }
     .shipping-information-content {
       .box();
+      .box-default();
     }
   }
 }
@@ -207,8 +209,11 @@
     .margin(bottom, big);
   }
   .opc {
-    .list-block();
-    .list-space(big);
+    .flex();
+    .flex-space(big);
+    > li {
+      .col(12);
+    }
   }
   .actions-toolbar {
     a, button {
@@ -281,6 +286,7 @@
   .checkout-review {
     .margin(top, big);
     .box();
+    .box-default();
     .box-small();
   }
   // content

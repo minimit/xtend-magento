@@ -25,9 +25,11 @@ require(modules, function (ko, $) {
   // add padding when disabling scrollbar
   window.xtScrollbarFixed = function () {
     $('body').css('padding-right', $.scrollbarWidth());
+    $('.modals-overlay').css('right', $.scrollbarWidth());
   };
   window.xtScrollbarNormal = function () {
-    $('body').css('padding-right', 0);
+    $('body').css('padding-right', '');
+    $('.modals-overlay').css('right', '');
   };
 
   //////////////////////

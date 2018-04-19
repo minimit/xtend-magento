@@ -5,11 +5,11 @@
 // wrapper
 
 .search-wrapper {
-  .drop-outer();
+  .drop-container();
   @media @max-sm {
-    .drop-outer-static();
+    .drop-container-static();
     .drop {
-      .drop-outer-static .drop();
+      .drop-container-static .drop();
     }
   }
   @media @min-sm {
@@ -32,8 +32,10 @@
 
 .search-wrapper .ui-dialog .ui-dialog-content {
   .box();
+  .box-default();
   .box-noborder();
   .box-none() !important;
+  width: 100%;
 }
 .block-search {
   .block-title {

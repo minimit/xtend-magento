@@ -15,6 +15,7 @@
   .block-customer-login,
   .block-new-customer {
     .box();
+    .box-default();
     .box-giant();
   }
   // content
@@ -27,6 +28,7 @@
 
 .form.create.account {
   .box();
+  .box-default();
   .box-giant();
   max-width: 62.5rem;
 }
@@ -35,6 +37,7 @@
 
 .form.password.forget {
   .box();
+  .box-default();
   .box-giant();
   max-width: 62.5rem;
   // content
@@ -43,6 +46,7 @@
     .margin(top, medium);
   }
   .captcha-image {
+    .list();
     .list-line();
     .list-space(small);
     .align-items-center();
@@ -115,6 +119,7 @@
   }
   .box-content {
     .box();
+    .box-default();
     .box-small();
   }
 }
@@ -125,6 +130,7 @@
 .form-edit-account,
 .form-newsletter-manage {
   .box();
+  .box-default();
   .box-big();
 }
 
@@ -160,12 +166,11 @@
     &.active {
       .display(block);
       // animations
-      .anim-vertical();
       .anim-vertical.active();
     }
     // content
     > ul {
-      .list-block();
+      .list();
       .list-space(tiny);
       .list-small();
       .list-none();

@@ -1,8 +1,9 @@
+
 <button type="button" class="action primary open-modal-test-1">
-    <span>normal</span>
+    <span>Modal</span>
 </button>
 <button type="button" class="action primary open-modal-test-2">
-    <span>screen</span>
+    <span>Modal screen</span>
 </button>
 <div id="modal-test-1" style="display:none;">
     <h3>Title h2</h3>
@@ -73,3 +74,60 @@
 
     });
 </script>
+
+<div class="drop-outer-0">
+  <button type="button" class="button">
+    <span>Dropdown</span>
+  </button>
+  <div data-role="dropdownDialog"
+       data-mage-init='{"dropdownDialog":{
+        "appendTo":".drop-outer-0",
+        "triggerTarget":".drop-outer-0 > .button",
+        "timeout": "2000",
+        "closeOnMouseLeave": false,
+        "closeOnEscape": true,
+        "triggerClass":"active",
+        "parentClass":"active",
+        "buttons":[]}}'>
+    <ul>
+      <li>
+        <button type="button">Lorem</button>
+      </li>
+      <li>
+        <button type="button">Lorem ipsum</button>
+      </li>
+      <li>
+        <button type="button">Lorem ipsum</button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div data-mage-init='{"tabs":{"openedState": "active", "collapsibleElement": "ul > li", "content": "> div"}}'>
+  <ul>
+    <li>
+      <a href="#one">
+        title1
+      </a>
+    </li>
+    <li>
+      <a href="#two">
+        title2
+      </a>
+    </li>
+    <li>
+      <a href="#three">
+        title3
+      </a>
+    </li>
+  </ul>
+  <div id="one">
+    <h4>Content one</h4>
+  </div>
+  <div id="two">
+    <h4>Content two</h4>
+  </div>
+  <div id="three">
+    <h4>Content three</h4>
+  </div>
+</div>

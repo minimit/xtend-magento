@@ -5,25 +5,30 @@
 button,
 .action.primary {
   &:extend(.btn all);
-  &:extend(.btn-primary all);
+  .btn-primary();
   &.abs-button-s {
-    &:extend(.btn-small all);
+    .btn-small();
   }
   &.abs-button-l {
-    &:extend(.btn-big all);
+    .btn-big();
   }
   &.alink {
-    &:extend(.btn-link all);
+    .btn-link();
   }
   &.abs-button-responsive {
     .block();
-    .text(center);
+    .text-align(center);
   }
 }
 
 .action.secondary,
 .action-secondary {
-  &:extend(.btn-secondary all);
+  .btn-secondary();
+}
+
+.action.close {
+  .btn-close();
+  &:extend(.box > .btn-close all);
 }
 
 //////////////////////
@@ -31,7 +36,7 @@ button,
 //////////////////////
 
 .ui-dialog-container {
-  &:extend(.drop-outer all);
+  &:extend(.drop-container all);
   &.active {
     .ui-dialog {
       &:extend(.drop.active all);
@@ -41,18 +46,20 @@ button,
 
 .ui-dialog {
   &:extend(.drop all);
+  &:extend(.drop.drop-default all);
 }
 
 .ui-dialog .ui-dialog-content {
   display: block;
-  &:extend(.drop .drop-inner all);
+  &:extend(.drop > .drop-inner all);
+  &:extend(.drop.drop-default > .drop-inner all);
 }
 
 .ui-dialog-content > ul,
 ul.dropdown { // ul.dropdown is store and language etc..
-  &:extend(.list-block all);
-  &:extend(.list-default all);
-  &:extend(.drop .drop-inner > ul all);
+  &:extend(.list all);
+  &:extend(.list.list-drop all);
+  &:extend(.drop.drop-default > .drop-inner > .list-drop all);
 }
 
 // @FIX toggle
@@ -73,37 +80,43 @@ ul.dropdown { // ul.dropdown is store and language etc..
 
 .modal-custom:not(.opc-sidebar),
 .modal-popup {
-  &:extend(.overlay all);
+  &:extend(.overlay-outer all);
   .modal-outer-wrap {
-    &:extend(.overlay .overlay-inner all);
+    &:extend(.overlay all);
+    &:extend(.overlay.overlay-default all);
   }
   .modal-inner-wrap {
-    &:extend(.overlay .overlay-content all);
+    &:extend(.overlay > .overlay-inner all);
+    &:extend(.overlay.overlay-default > .overlay-inner all);
   }
   &.overlay-screen {
     .modal-outer-wrap {
-      &:extend(.overlay.overlay-screen .overlay-inner all);
+      &:extend(.overlay.overlay-screen all);
+      &:extend(.overlay.overlay-default.overlay-screen all);
     }
     .modal-inner-wrap {
-      &:extend(.overlay.overlay-screen .overlay-content all);
+      &:extend(.overlay.overlay-screen > .overlay-inner all);
     }
     .modals-overlay {
       display: none;
     }
   }
   &._show {
-    &:extend(.overlay.active all);
-    .modal-inner-wrap {
-      &:extend(.overlay .overlay-content.active all);
+    &:extend(.overlay-outer.active all);
+    .modal-outer-wrap {
+      &:extend(.overlay-outer.active > .overlay all);
     }
-    .modals-overlay {
-      &:extend(.xt-backdrop.active all);
+    .modal-inner-wrap {
+      &:extend(.overlay-outer.active > .overlay > .overlay-inner all);
+    }
+    .action-close {
+      &:extend(.overlay-outer.active > .overlay > .overlay-inner > .btn-close all);
     }
   }
   .action-close {
     &:extend(.btn all);
-    &:extend(.btn-close all);
-    &:extend(.overlay .btn-close all);
+    &:extend(.btn.btn-close all);
+    &:extend(.overlay > .overlay-inner > .btn-close all);
   }
 }
 
@@ -113,7 +126,7 @@ ul.dropdown { // ul.dropdown is store and language etc..
 
 body._has-modal {
   overflow-y: hidden;
-  .overlay._show {
+  .modal-popup._show {
     overflow-y: scroll;
   }
 }
@@ -123,8 +136,10 @@ body._has-modal {
 //////////////////////
 
 [role="tablist"] {
-  &:extend(.list-line all);
-  &:extend(.list-default all);
+  &:extend(.list all);
+  .list-line();
+  .list-space(none);
+  &:extend(.list.list-default all);
 }
 
 // @FIX size
@@ -265,7 +280,7 @@ legend + br {
   .sr-only();
 }
 .action.close {
-  &:extend(.btn-close all);
+  &:extend(.btn.btn-close all);
 }
 
 .no-display {
@@ -274,13 +289,13 @@ legend + br {
 
 .actions-toolbar {
   > .action {
-    .flex-order(0);
+    .order(0);
   }
   > .secondary {
-    .flex-order(1);
+    .order(1);
   }
   > .primary {
-    .flex-order(2);
+    .order(2);
   }
 }
 

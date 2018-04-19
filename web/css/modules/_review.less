@@ -11,6 +11,7 @@
 // .product-reviews-summary
 
 .product-reviews-summary {
+  .list();
   .list-line();
   .list-space(medium);
   .align-items-center();
@@ -76,8 +77,11 @@
     .display(none);
   }
   .review-items {
-    .list-block();
-    .list-space(small);
+    .flex();
+    .flex-space(small);
+    .review-item {
+      .col(12);
+    }
   }
 }
 .review-title {

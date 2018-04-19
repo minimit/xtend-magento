@@ -20,7 +20,6 @@
     .margin(top, medium);
     // animations
     &._active {
-      .anim-vertical();
       .anim-vertical.active();
     }
   }
@@ -33,7 +32,7 @@
 
 .gift-options-cart-item {
   .padding(bottom, medium);
-  .flex-order(1);
+  .order(1);
   width: 100%;
   > .action.action-gift {
     .float(right);
@@ -43,11 +42,10 @@
   .gift-content {
     .display(none);
     width: 100%;
-    .text(left);
+    .text-align(left);
     &._active {
       .display(block);
       // animations
-      .anim-vertical();
       .anim-vertical.active();
     }
     .gift-options {
@@ -84,6 +82,7 @@
   }
   .gift-message-summary {
     .box();
+    .box-default();
     .box-tiny();
   }
   .action-edit,
@@ -92,7 +91,7 @@
     .btn-tiny();
     .btn-icon();
     .btn-secondary-empty();
-    .flex-order(0);
+    .order(0);
   }
   .action-edit {
     .by-key(@icons, edit);

@@ -5,7 +5,7 @@
 <nav class="header-content" role="navigation">
 
     <div class="header-main">
-        <div class="container-fluid">
+        <div class="container">
             <div class="header-main-inner">
 
                 <div class="header-main-nav">
@@ -24,8 +24,12 @@
 
                 <div class="header-main-links">
                     <div class="header-main-links-inner">
+                      <div>
                         <?= $block->getChildHtml('header.links.additional') ?>
+                      </div>
+                      <div>
                         <?= $block->getChildHtml('header.links.store') ?>
+                      </div>
                     </div>
                 </div>
 

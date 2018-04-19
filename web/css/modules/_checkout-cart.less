@@ -6,6 +6,7 @@
 
 .cart-summary {
   .box();
+  .box-default();
   .summary.title {
     .display(inline-block);
     .h4();
@@ -32,7 +33,7 @@
   }
   .checkout.methods {
     .margin(top, small) !important;
-    .list-block();
+    .list();
     .list-space(small);
     .list-small();
     .list-center();
@@ -139,7 +140,7 @@
     .btn-tiny();
     .btn-icon();
     .btn-secondary-empty();
-    .flex-order(0);
+    .order(0);
   }
   .action-edit {
     .by-key(@icons, edit);

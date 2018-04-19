@@ -75,6 +75,7 @@
   .padding(bottom, medium);
   // content
   ul {
+    .list();
     .list-line();
     .list-space(big);
     .list-small();
@@ -210,6 +211,7 @@
 
 .pages {
   .items {
+    .list();
     .list-line();
     .list-space(tiny);
     .list-small();
@@ -240,7 +242,7 @@
     .btn-small();
     .btn-icon();
     .btn-secondary-empty();
-    .btn-secondary-empty.active();
+    .btn.btn-secondary-empty.active();
   }
 }
 
@@ -250,6 +252,7 @@
 
 .actions-toolbar {
   .padding(top, medium);
+  .list();
   .list-line();
   .list-space(small);
   .justify-content-end();
@@ -303,6 +306,8 @@
 //////////////////////
 
 .m2-product-options {
+  .display(block);
+  .list-space(none);
   .dl-line();
   .margin(top, none);
   dt {
@@ -364,7 +369,7 @@ dl.product.options {
   }
   td {
     .padding(all, tiny);
-    .text(right);
+    .text-align(right);
     .font-small() !important;
   }
   // borders
@@ -564,7 +569,6 @@ dl.product.options {
     .alert-error();
   }
   // animations
-  .anim-vertical();
   .anim-vertical.active();
 }
 
@@ -656,7 +660,6 @@ div.mage-error {
 [data-role="collapsible"] {
   &[style="display: flex;"], &[style="display: block;"] {
     // animations
-    .anim-vertical();
     .anim-vertical.active();
   }
 }
