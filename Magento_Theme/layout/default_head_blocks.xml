@@ -34,9 +34,9 @@
         <!-- add theme -->
 
         <link src="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" src_type="url"/>
-        <link src="css/theme.css"/>
+        <link src="css/theme.min.css"/>
         <link src="js/xtend-magento.js"/>
-        <link src="js/bundle.js"/>
+        <link src="js/bundle.min.js"/>
 
     </head>
 </page>

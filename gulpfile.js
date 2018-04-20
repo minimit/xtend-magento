@@ -1,21 +1,14 @@
 'use strict';
 
-var fs = require('fs');
 var gulp = require('gulp');
-var log = require('fancy-log');
-var merge = require('merge-stream');
-var child = require('child_process');
 var buffer = require('vinyl-buffer');
 var source = require('vinyl-source-stream');
 
 var less = require('gulp-less');
-var gutil = require('gulp-util');
-var clean = require('gulp-clean');
 var watch = require('gulp-watch');
 var rename = require('gulp-rename');
-var replace = require('gulp-replace');
 var browserify = require('browserify');
-let uglify = require('gulp-uglify-es').default;
+var uglify = require('gulp-uglify-es').default;
 var cleanCSS = require('gulp-clean-css');
 var sourcemaps = require('gulp-sourcemaps');
 
@@ -34,7 +27,7 @@ gulp.task('less', function () {
     .pipe(gulp.dest('web/'));
 });
 gulp.task('less:watch', function (done) {
-  gulp.watch(['dist/**/*.less'], gulp.series('less'));
+  gulp.watch(['web/**/*.less'], gulp.series('less'));
   done();
 });
 
@@ -73,7 +66,7 @@ gulp.task('watch',
 );
 
 gulp.task('build',
-  gulp.series(gulp.parallel('less', 'js'), gulp.parallel('less', 'js'))
+  gulp.series(gulp.parallel('less', 'js'))
 );
 
 gulp.task('default', gulp.series('build'));
