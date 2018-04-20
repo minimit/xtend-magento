@@ -7,6 +7,7 @@ var source = require('vinyl-source-stream');
 var less = require('gulp-less');
 var watch = require('gulp-watch');
 var rename = require('gulp-rename');
+var filter = require('gulp-filter');
 var browserify = require('browserify');
 var uglify = require('gulp-uglify-es').default;
 var cleanCSS = require('gulp-clean-css');
@@ -18,7 +19,9 @@ gulp.task('less', function () {
   return gulp.src(['web/**/*.less', '!web/**/_*.less'])
     .pipe(sourcemaps.init())
     .pipe(less())
+    .pipe(sourcemaps.write(''))
     .pipe(gulp.dest('web/'))
+    .pipe(filter('**/*.css')) // filter out map
     .pipe(cleanCSS())
     .pipe(rename({
       suffix: '.min'
@@ -42,7 +45,7 @@ gulp.task('js', function () {
     .pipe(source('bundle.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(gulp.dest('web/'))
+    .pipe(gulp.dest('web/js/'))
     .pipe(uglify({
       output: {
         comments: /^!/

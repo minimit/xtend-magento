@@ -33,14 +33,3 @@ node_modules
 vendor
 prepros.cfg
 config.codekit3
-
-# ignore compiled
-theme.css
-theme.css.map
-theme.min.css
-theme.min.css.map
-bundle.js
-bundle.js.map
-bundle.min.js
-bundle.min.js
-bundle.min.js.map
