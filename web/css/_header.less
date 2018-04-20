@@ -28,7 +28,7 @@
     .by-key(@icons, menu);
     .icon(@content:@by-key, @size:@icon-big, @sr-only:true);
     html.nav-open & {
-      .btn.btn-primary.active();
+      .btn-primary.active();
       .by-key(@icons, close);
       .icon(@content:@by-key, @size:@icon-big, @sr-only:true);
     }
@@ -71,13 +71,11 @@
     }
     .header-main-links-inner {
       .list();
-      .list-line();
       .list-space(small);
     }
     ul {
       .margin(bottom, .5rem);
       .list();
-      .list-line();
       .list-space(none);
       .list-tiny();
       .list-primary();
@@ -95,7 +93,6 @@
     }
     .header-main-right-inner {
       .list();
-      .list-line();
       .list-space(tiny);
     }
   }
@@ -112,18 +109,18 @@
   .margin(bottom, -1rem);
   ul.list {
     .list();
-    .list-line();
     .list-space(none);
     .list-primary();
     a {
       .font-sans-semibold() !important;
       &.ui-state-active {
-        .btn.btn-primary.active() !important;
+        .btn-primary.active() !important;
       }
     }
   }
   ul.submenu {
     .list();
+    .list-block();
     .list-space(none);
     .list-small();
     .list-squared();
@@ -169,7 +166,6 @@
   background-color: @white;
   ul.header-mobile-head {
     .list();
-    .list-line();
     .list-space(none);
     .list-big();
     .list-squared();
@@ -200,6 +196,7 @@
   }
   ul.list {
     .list();
+    .list-block();
     .list-space(none);
     .list-big();
     .list-wide();
@@ -207,6 +204,7 @@
     .list-secondary-empty();
     > li {
       .list();
+      .list-block();
       .list-space(none);
     }
     > li.level-top {
@@ -217,6 +215,7 @@
   }
   ul.submenu {
     .list();
+    .list-block();
     .list-space(none);
     .list-small();
     .list-narrow();
@@ -226,6 +225,7 @@
     .padding(all, 1.5rem);
     > li {
       .list();
+      .list-block();
       .list-space(none);
     }
     ul.submenu {
@@ -309,12 +309,12 @@ html.nav-open {
   .main-container,
   .page-footer {
     position: relative;
-    .animation-default();
+    .animation-default.active();
     animation-name: anim-header;
     transform: translateX(@header-mobile-width);
   }
   .header-mobile-content {
-    .animation-default();
+    .animation-default.active();
     animation-name: anim-header-mobile;
   }
   .header-mobile-backdrop {

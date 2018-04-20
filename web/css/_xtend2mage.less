@@ -46,20 +46,18 @@ button,
 
 .ui-dialog {
   &:extend(.drop all);
-  &:extend(.drop.drop-default all);
 }
 
 .ui-dialog .ui-dialog-content {
   display: block;
   &:extend(.drop > .drop-inner all);
-  &:extend(.drop.drop-default > .drop-inner all);
 }
 
 .ui-dialog-content > ul,
-ul.dropdown { // ul.dropdown is store and language etc..
+ul.dropdown {
   &:extend(.list all);
-  &:extend(.list.list-drop all);
-  &:extend(.drop.drop-default > .drop-inner > .list-drop all);
+  &:extend(.list-drop all);
+  &:extend(.drop > .drop-inner > .list all);
 }
 
 // @FIX toggle
@@ -83,16 +81,13 @@ ul.dropdown { // ul.dropdown is store and language etc..
   &:extend(.overlay-outer all);
   .modal-outer-wrap {
     &:extend(.overlay all);
-    &:extend(.overlay.overlay-default all);
   }
   .modal-inner-wrap {
     &:extend(.overlay > .overlay-inner all);
-    &:extend(.overlay.overlay-default > .overlay-inner all);
   }
   &.overlay-screen {
     .modal-outer-wrap {
       &:extend(.overlay.overlay-screen all);
-      &:extend(.overlay.overlay-default.overlay-screen all);
     }
     .modal-inner-wrap {
       &:extend(.overlay.overlay-screen > .overlay-inner all);
@@ -115,7 +110,7 @@ ul.dropdown { // ul.dropdown is store and language etc..
   }
   .action-close {
     &:extend(.btn all);
-    &:extend(.btn.btn-close all);
+    &:extend(.btn-close all);
     &:extend(.overlay > .overlay-inner > .btn-close all);
   }
 }
@@ -137,9 +132,7 @@ body._has-modal {
 
 [role="tablist"] {
   &:extend(.list all);
-  .list-line();
   .list-space(none);
-  &:extend(.list.list-default all);
 }
 
 // @FIX size
@@ -280,7 +273,7 @@ legend + br {
   .sr-only();
 }
 .action.close {
-  &:extend(.btn.btn-close all);
+  &:extend(.btn-close all);
 }
 
 .no-display {
