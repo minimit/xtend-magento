@@ -9,8 +9,5 @@
     "files": [
       "registration.php"
     ]
-  },
-  "require": {
-    "minimit/xtend-library": "~0.3.0"
   }
 }
