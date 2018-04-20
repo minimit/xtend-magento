@@ -26,7 +26,7 @@ After in `xtend.less` put theming xtend-library path in `@import`.
 
 ### Compilation
 
-**If you want to recompile the library**: we use gulp to compile and watch files.
+We use gulp to compile and watch files.
 
 * Install required npm packages with ```npm install```
 * Use ```npm run build``` or ```npm run watch```
