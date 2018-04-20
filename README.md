@@ -22,7 +22,7 @@ mkdir -p xtend-library/
 cp -r node_modules/xtend-library/dist/ xtend-library/
 ```
 
-After in `xtend.less` put the right path to the `@import`.
+After in `xtend.less` put theming xtend-library path in `@import`.
 
 ### Compilation
 
