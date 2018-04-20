@@ -18,11 +18,11 @@ This theme is a **standalone** fork. It doesn't support magento2 theme inheritan
 You need to copy xtend-library **/dist** to customize the files.
 
 ```
-mkdir -p xtend-library/
-cp -r node_modules/xtend-library/dist/ xtend-library/
+mkdir -p web/xtend-library/
+cp -r node_modules/xtend-library/ web/xtend-library/
 ```
 
-After in `xtend.less` put theming xtend-library path in `@import`.
+After in `xtend.less` put package manager xtend-library core path and put xtend-library theme path.
 
 ### Compilation
 
