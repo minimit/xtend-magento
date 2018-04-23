@@ -84,8 +84,7 @@
       line-height: 0;
       a {
         position: relative;
-        .by-key(@icons, next);
-        .icon(@content:@by-key, @size:7px, @sr-only:true);
+        .icon(@content: @icon-next, @size: 7px, @sr-only: true);
         &:before {
           position: absolute;
           .margin(top, -.25rem);
@@ -144,11 +143,9 @@
     .btn-tiny();
     .btn-icon();
     .btn-primary-empty();
-    .by-key(@icons, arrow-up);
-    .icon(@content:@by-key, @size:@icon-medium, @sr-only:true);
+    .icon(@content: @icon-arrow-up, @size: @icon-medium, @sr-only: true);
     &.sort-desc {
-      .by-key(@icons, arrow-down);
-      .icon(@content:@by-key, @size:@icon-medium, @sr-only:true);
+      .icon(@content: @icon-arrow-down, @size: @icon-medium, @sr-only: true);
     }
     .margin(left, small);
   }
@@ -164,12 +161,10 @@
     .btn-primary-empty();
   }
   .mode-grid {
-    .by-key(@icons, grid);
-    .icon(@content:@by-key, @size:@icon-medium, @sr-only:true);
+    .icon(@content: @icon-grid, @size: @icon-medium, @sr-only: true);
   }
   .mode-list {
-    .by-key(@icons, list);
-    .icon(@content:@by-key, @size:@icon-medium, @sr-only:true);
+    .icon(@content: @icon-list, @size: @icon-medium, @sr-only: true);
   }
   // .pager
   .pager {
@@ -227,13 +222,11 @@
   }
   .action.next {
     .btn-icon();
-    .by-key(@icons, next);
-    .icon(@content:@by-key, @size:@icon-medium, @sr-only:true);
+    .icon(@content: @icon-next, @size: @icon-medium, @sr-only: true);
   }
   .action.previous {
     .btn-icon();
-    .by-key(@icons, prev);
-    .icon(@content:@by-key, @size:@icon-medium, @sr-only:true);
+    .icon(@content: @icon-prev, @size: @icon-medium, @sr-only: true);
   }
   strong.page {
     .btn();
@@ -451,8 +444,7 @@ dl.product.options {
     .btn-tiny();
     .btn-icon();
     .btn-secondary();
-    .by-key(@icons, edit);
-    .icon(@content:@by-key, @size:@icon-medium, @sr-only:true);
+    .icon(@content: @icon-edit, @size: @icon-medium, @sr-only: true);
   }
 }
 

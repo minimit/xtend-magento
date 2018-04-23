@@ -94,8 +94,7 @@
     }
     .action.delete {
       .btn-icon();
-      .by-key(@icons, trash);
-      .icon(@content:@by-key, @icon-medium, @sr-only:true);
+      .icon(@content: @icon-trash, @size: @icon-medium, @sr-only: true);
     }
   }
 }
@@ -150,16 +149,14 @@
       .btn-tiny();
       .btn-icon();
       .btn-secondary-empty();
-      .by-key(@icons, edit);
-      .icon(@content:@by-key, @icon-big, @sr-only:true);
+      .icon(@content: @icon-edit, @size: @icon-big, @sr-only: true);
     }
     .action.delete {
       .btn();
       .btn-tiny();
       .btn-icon();
       .btn-secondary-empty();
-      .by-key(@icons, trash);
-      .icon(@content:@by-key, @icon-big, @sr-only:true);
+      .icon(@content: @icon-trash, @size: @icon-big, @sr-only: true);
     }
   }
 }

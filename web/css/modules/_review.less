@@ -25,8 +25,7 @@
   }
   .rating-result {
     position: relative;
-    .by-key(@icons, star);
-    .icon(@content:@by-key @by-key @by-key @by-key @by-key, 1.25rem, @sr-only:false);
+    .icon(@content: @icon-star @icon-star @icon-star @icon-star @icon-star, @size: 1.25rem, @sr-only: false);
     &:before {
       position: absolute;
       z-index: 1;
@@ -40,8 +39,7 @@
     > span {
       display: block;
       overflow: hidden;
-      .by-key(@icons, star);
-      .icon(@content:@by-key @by-key @by-key @by-key @by-key, 1.25rem, @sr-only:true);
+      .icon(@content: @icon-star @icon-star @icon-star @icon-star @icon-star, @size: 1.25rem, @sr-only: true);
       &:before {
         display: block;
         z-index: 2;

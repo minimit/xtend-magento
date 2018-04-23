@@ -25,12 +25,10 @@
     .btn-small();
     .btn-icon();
     .btn-primary();
-    .by-key(@icons, menu);
-    .icon(@content:@by-key, @size:@icon-big, @sr-only:true);
+    .icon(@content: @icon-menu, @size: @icon-big, @sr-only: true);
     html.nav-open & {
       .btn-primary.active();
-      .by-key(@icons, close);
-      .icon(@content:@by-key, @size:@icon-big, @sr-only:true);
+      .icon(@content: @icon-close, @size: @icon-big, @sr-only: true);
     }
   }
 }

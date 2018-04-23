@@ -15,8 +15,7 @@
     .btn-tiny();
     .btn-icon();
     .btn-link();
-    .by-key(@icons, trash);
-    .icon(@content:@by-key, @size:@icon-medium, @sr-only:true);
+    .icon(@content: @icon-trash, @size: @icon-medium, @sr-only: true);
   }
   .actions-toolbar {
     .action {
@@ -54,8 +53,7 @@
       .btn();
       .btn-icon();
       .btn-secondary();
-      .by-key(@icons, trash);
-      .icon(@content:@by-key, @size:@icon-medium, @sr-only:true);
+      .icon(@content: @icon-trash, @size: @icon-medium, @sr-only: true);
     }
   }
   .product-item-actions {
@@ -74,8 +72,7 @@
     }
     .action.towishlist {
       .btn-icon();
-      .by-key(@icons, wishlist);
-      .icon(@content:@by-key, @size:@icon-big, @sr-only:true);
+      .icon(@content: @icon-wishlist, @size: @icon-big, @sr-only: true);
     }
   }
 }
