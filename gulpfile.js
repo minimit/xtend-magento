@@ -10,7 +10,7 @@ var sourcemaps = require('gulp-sourcemaps');
 // compile less
 
 gulp.task('less', function () {
-  return gulp.src(['web/**/theme.less'])
+  return gulp.src(['web/**/xtend-magento.less'])
     .pipe(sourcemaps.init())
     .pipe(less())
     .pipe(cleanCSS())
