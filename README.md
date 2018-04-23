@@ -13,6 +13,8 @@ This theme is a **standalone** fork for styling. It doesn't support magento2 the
 * Put the files inside `app/design/frontend/<vendor>/<theme>/`.
 * Install required npm packages with ```npm install```
 
+Asset files and `.phtml` inherited from <strong>Base</strong> and <strong>Luma</strong> magento2 themes as normal.
+
 ### Theming
 
 You need to copy [xtend-library](https://github.com/minimit/xtend-library) **/dist** to customize the files.
