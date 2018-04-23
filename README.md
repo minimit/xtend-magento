@@ -8,12 +8,11 @@ You can install with one of the following:
 * download: [latest release](https://github.com/minimit/xtend-magento/releases/latest)
 * clone: `git clone https://github.com/minimit/xtend-magento.git`
 
-This theme is a **standalone** fork for styling. It doesn't support magento2 theme inheritance of `.less` files.
+Asset files and `.phtml` are inherited from <strong>Base</strong> and <strong>Luma</strong> magento2 themes.
+For styling this theme is a **standalone** fork. It doesn't support magento2 theme inheritance for `.less` files.
 
 * Put the files inside `app/design/frontend/<vendor>/<theme>/`.
 * Install required npm packages with ```npm install```
-
-Asset files and `.phtml` inherited from <strong>Base</strong> and <strong>Luma</strong> magento2 themes as normal.
 
 ### Theming
 
