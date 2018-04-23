@@ -1,6 +1,6 @@
 {
   "name": "xtend-magento",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Xtend theme for magento2",
   "homepage": "",
   "license": "MIT",
@@ -15,7 +15,7 @@
     "watch": "gulp watch"
   },
   "dependencies": {
-    "xtend-library": "^0.4.0"
+    "xtend-library": "^0.4.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
