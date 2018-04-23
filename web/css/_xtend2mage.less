@@ -26,11 +26,6 @@ button,
   .btn-secondary();
 }
 
-.action.close {
-  .btn-close();
-  &:extend(.box > .btn-close all);
-}
-
 //////////////////////
 // drop
 //////////////////////
@@ -46,18 +41,17 @@ button,
 
 .ui-dialog {
   &:extend(.drop all);
+  .ui-dialog-content {
+    display: block;
+    &:extend(.drop > .drop-inner all);
+  }
 }
 
-.ui-dialog .ui-dialog-content {
-  display: block;
-  &:extend(.drop > .drop-inner all);
-}
-
-.ui-dialog-content > ul,
-ul.dropdown {
-  &:extend(.list all);
-  &:extend(.list-drop all);
-  &:extend(.drop > .drop-inner > .list all);
+.ui-dialog-content > ul { //, ul.dropdown
+  .list();
+  .list-drop();
+  &:extend(.drop-inner > .list-drop all);
+  .drop > .drop-inner > .list() !important;
 }
 
 // @FIX toggle
@@ -105,13 +99,11 @@ ul.dropdown {
       &:extend(.overlay-outer.active > .overlay > .overlay-inner all);
     }
     .action-close {
-      &:extend(.overlay-outer.active > .overlay > .overlay-inner > .btn-close all);
+      .overlay-outer.active > .overlay > .overlay-inner > .btn-close();
     }
   }
   .action-close {
-    &:extend(.btn all);
-    &:extend(.btn-close all);
-    &:extend(.overlay > .overlay-inner > .btn-close all);
+    .overlay > .overlay-inner > .btn-close();
   }
 }
 
@@ -131,7 +123,7 @@ body._has-modal {
 //////////////////////
 
 [role="tablist"] {
-  &:extend(.list all);
+  .list();
   .list-space(none);
 }
 
@@ -272,8 +264,10 @@ legend + br {
 .action.skip {
   .sr-only();
 }
-.action.close {
-  &:extend(.btn-close all);
+.action.close,
+.action-close {
+  .btn-close();
+  .box > .btn-close();
 }
 
 .no-display {
