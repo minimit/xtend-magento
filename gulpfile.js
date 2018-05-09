@@ -14,7 +14,7 @@ var uglify = require('gulp-uglify-es').default;
 // compile less
 
 gulp.task('less', function () {
-  return gulp.src(['web/**/xtend-magento.less'])
+  return gulp.src(['web/**/theme.less'])
     .pipe(sourcemaps.init())
     .pipe(less())
     .pipe(cleanCSS())

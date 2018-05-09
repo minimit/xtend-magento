@@ -2,7 +2,7 @@
 
 <h4><?= $block->getTitle() ?? 'Title'  ?></h4>
 
-<ul data-role="content">
+<ul class="<?= $block->getCssClass() ?>" data-role="content">
     <?php foreach ($block->getLinks() as $link): ?>
         <li>
             <a <?= $link->getLinkAttributes() ?>><?= $link->escapeHtml($link->getLabel())?></a>

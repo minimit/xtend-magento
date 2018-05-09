@@ -12,10 +12,12 @@
   ],
   "scripts": {
     "build": "gulp build",
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "version": "npm run build && git add .",
+    "postversion": "git push && git push --tags && npm publish"
   },
   "dependencies": {
-    "xtend-library": "^0.4.5"
+    "xtend-library": "^0.4.7"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
