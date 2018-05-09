@@ -132,5 +132,15 @@ require(modules, function (ko, $) {
   });
 
   //////////////////////
+  // xtend
+  //////////////////////
+
+  // init all
+
+  document.addEventListener("DOMContentLoaded", function() {
+    XtUtil.initAll();
+  });
+
+  //////////////////////
 
 });
