@@ -1,11 +1,15 @@
 'use strict';
 
 var gulp = require('gulp');
+var buffer = require('vinyl-buffer');
+var source = require('vinyl-source-stream');
 
 var less = require('gulp-less');
 var watch = require('gulp-watch');
+var browserify = require('browserify');
 var cleanCSS = require('gulp-clean-css');
 var sourcemaps = require('gulp-sourcemaps');
+var uglify = require('gulp-uglify-es').default;
 
 // compile less
 
@@ -22,22 +26,15 @@ gulp.task('less:watch', function (done) {
   done();
 });
 
-/*
-var buffer = require('vinyl-buffer');
-var source = require('vinyl-source-stream');
-
-var browserify = require('browserify');
-var uglify = require('gulp-uglify-es').default;
-
 // compile js
 
 gulp.task('js', function () {
   var b = browserify({
-    entries: 'web/js/theme.js',
+    entries: 'web/js/xtend-magento.js',
     debug: true
-  }).transform('babelify');
+  });
   return b.bundle()
-    .pipe(source('bundle.js'))
+    .pipe(source('xtend-magento.min.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(uglify({
@@ -49,19 +46,18 @@ gulp.task('js', function () {
     .pipe(gulp.dest('web/js/'));
 });
 gulp.task('js:watch', function (done) {
-  gulp.watch(['web/js/theme.js'], gulp.series('js'));
+  gulp.watch(['web/js/xtend-magento.js'], gulp.series('js'));
   done();
 });
-*/
 
 // tasks
 
 gulp.task('watch',
-  gulp.series(gulp.parallel('less'), gulp.parallel('less:watch'))
+  gulp.series(gulp.parallel('less'), gulp.parallel('less:watch', 'js:watch'))
 );
 
 gulp.task('build',
-  gulp.series(gulp.parallel('less'))
+  gulp.series(gulp.parallel('less', 'js'))
 );
 
 gulp.task('default', gulp.series('build'));
