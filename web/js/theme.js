@@ -1,4 +1,4 @@
-var modules = ['ko', 'jquery'];
+var modules = ['ko', 'jquery', 'xtend'];
 require(modules, function (ko, $) {
 
   'use strict';
@@ -137,9 +137,14 @@ require(modules, function (ko, $) {
 
   // init all
 
-  document.addEventListener("DOMContentLoaded", function() {
+  function initAll() {
     XtUtil.initAll();
-  });
+  }
+  if (document.readyState !== 'loading') {
+    initAll();
+  } else if (document.addEventListener) {
+    document.addEventListener('DOMContentLoaded', initAll);
+  }
 
   //////////////////////
 

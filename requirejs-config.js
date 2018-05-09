@@ -1,4 +1,7 @@
 var config = {
+  paths: {
+    'xtend': 'js/xtend-magento.min'
+  },
   config: {
     mixins: {
       "mage/menu": {
