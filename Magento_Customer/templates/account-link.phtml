@@ -10,9 +10,24 @@
 <?php $_loggedin = $this->helper('Magento\Checkout\Helper\Cart')->getCart()->getCustomerSession()->isLoggedIn(); ?>
 
 <?php if( $_loggedin ) : ?>
-    <li class="account-link">
-        <a <?= /* @noEscape */ $block->getLinkAttributes() ?>>
-            <?= $block->escapeHtml($block->getLabel()) ?>
+    <li>
+        <a href="<?php echo $block->getUrl('customer/account'); ?>">
+            <?php echo __('Dashboard') ?>
+        </a>
+    </li>
+    <li>
+        <a href="<?php echo $block->getUrl('customer/account'); ?>">
+            <?php echo __('Billing information') ?>
+        </a>
+    </li>
+    <li>
+        <a href="<?php echo $block->getUrl('customer/address'); ?>">
+            <?php echo __('Shipping address') ?>
+        </a>
+    </li>
+    <li>
+        <a href="<?php echo $block->getUrl('sales/order/history'); ?>">
+            <?php echo __('My orders') ?>
         </a>
     </li>
 <?php endif; ?>

@@ -1,4 +1,4 @@
-<?php /** @var \Magento\Framework\View\Element\Template $block */?>
+<?php /** @var \Magento\Framework\View\Element\Template $block */ ?>
 
 <?= $block->getChildHtml('header.skip') ?>
 
@@ -23,13 +23,22 @@
                 </div>
 
                 <div class="header-main-links">
-                    <div class="header-main-links-inner">
-                      <div>
-                        <?= $block->getChildHtml('header.links.additional') ?>
-                      </div>
-                      <div>
-                        <?= $block->getChildHtml('header.links.store') ?>
-                      </div>
+                    <div class="header-main-links-inner list list-space-none">
+                        <div>
+                            <div class="drop-container" data-xt-drop>
+                                <button type="button" class="btn btn-primary btn-tiny">
+                                    <?= __('My Account') ?>
+                                </button>
+                                <div class="drop">
+                                    <div class="drop-inner">
+                                        <?= $block->getChildHtml('header.links.store') ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <?= $block->getChildHtml('header.links.additional') ?>
+                        </div>
                     </div>
                 </div>
 

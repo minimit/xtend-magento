@@ -62,7 +62,7 @@
         <move element="header.links.store" destination="header.content"/>
         <block class="Magento\Customer\Block\Account\Navigation" name="header.links.store">
             <arguments>
-                <argument name="css_class" xsi:type="string">header-links-store</argument>
+                <argument name="css_class" xsi:type="string">header-links-store list list-drop</argument>
             </arguments>
         </block>
 
@@ -71,7 +71,7 @@
         <move element="header.links.additional" destination="header.content"/>
         <block class="Magento\Customer\Block\Account\Navigation" name="header.links.additional">
             <arguments>
-                <argument name="css_class" xsi:type="string">header-links-additional</argument>
+                <argument name="css_class" xsi:type="string">header-links-additional list list-space-none list-tiny list-primary</argument>
             </arguments>
         </block>
 

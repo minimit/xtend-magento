@@ -15,15 +15,9 @@
             <block class="Magento\Customer\Block\Account\RegisterLink">
                 <arguments>
                     <argument name="label" xsi:type="string" translate="true">Create an Account</argument>
-                    <argument name="class" xsi:type="string">register-link</argument>
                 </arguments>
             </block>
-            <block class="Magento\Customer\Block\Account\Link" template="Magento_Customer::account-link.phtml">
-                <arguments>
-                    <argument name="label" xsi:type="string" translate="true">My Account</argument>
-                    <argument name="class" xsi:type="string">my-account-link</argument>
-                </arguments>
-            </block>
+            <block class="Magento\Customer\Block\Account\Link" template="Magento_Customer::account-link.phtml" />
             <block class="Magento\Customer\Block\Account\AuthorizationLink"
                    template="Magento_Customer::account/link/authorization.phtml"/>
         </referenceBlock>
@@ -34,15 +28,9 @@
             <block class="Magento\Customer\Block\Account\RegisterLink">
                 <arguments>
                     <argument name="label" xsi:type="string" translate="true">Create an Account</argument>
-                    <argument name="class" xsi:type="string">register-link</argument>
                 </arguments>
             </block>
-            <block class="Magento\Customer\Block\Account\Link" template="Magento_Customer::account-link.phtml">
-                <arguments>
-                    <argument name="label" xsi:type="string" translate="true">My Account</argument>
-                    <argument name="class" xsi:type="string">my-account-link</argument>
-                </arguments>
-            </block>
+            <block class="Magento\Customer\Block\Account\Link" template="Magento_Customer::account-link.phtml" />
             <block class="Magento\Customer\Block\Account\AuthorizationLink"
                    template="Magento_Customer::account/link/authorization.phtml"/>
         </referenceBlock>
