@@ -103,12 +103,22 @@
   legend {
     .display(none);
   }
+  .review-field-ratings {
+    .form-group();
+  }
   .review-control-vote {
-    .form-group.inline();
     .form-group-small();
+    // .form-group-inline always
+    .list();
+    .list-space(medium);
+    .align-items-baseline();
+    .input-control {
+      width: auto;
+    }
+    // .form-group-inline fix no inner markup
     label {
-      .label-special();
-      .padding(right, medium) !important;
+      padding-left: 0;
+      margin-left: 0 !important;
     }
   }
   .action.submit {

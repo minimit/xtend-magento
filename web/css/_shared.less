@@ -135,8 +135,14 @@
   .sorter,
   .limiter {
     margin: 0 !important;
-    .form-group.inline();
     .form-group-tiny();
+    // .form-group-inline always
+    .list();
+    .list-space(medium);
+    .align-items-baseline();
+    .input-control {
+      width: auto;
+    }
   }
   .sorter-action {
     .btn();
@@ -242,7 +248,7 @@
 //////////////////////
 
 .actions-toolbar {
-  .padding(top, medium);
+  .padding(top, medium) !important;
   .list();
   .list-space(small);
   .justify-content-end();
@@ -608,15 +614,6 @@ div.mage-error {
   .note();
   .note-error();
   text-align: inherit;
-}
-
-// with .input-group
-
-.input-group {
-  div.mage-error {
-    position: absolute;
-    top: 100%;
-  }
 }
 
 //////////////////////
