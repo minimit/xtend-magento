@@ -109,6 +109,13 @@
   .review-control-vote {
     .form-group-small();
     .form-group-inline();
+    // fix no right markup
+    .input-special, input[type=checkbox], input[type=radio] {
+      .margin(right, none) !important;
+    }
+    label {
+      .margin(left, none) !important;
+    }
   }
   .action.submit {
     .btn-giant();
