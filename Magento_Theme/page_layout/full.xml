@@ -12,4 +12,13 @@
 
     <update handle="1column"/>
 
+    <!-- page.main.title -->
+
+    <move element="page.main.title" destination="page.main.title.wrapper"/>
+    <referenceContainer name="columns.top">
+        <container name="page.main.title.wrapper" htmlTag="div" htmlClass="container"
+                   after="header.container">
+        </container>
+    </referenceContainer>
+
 </layout>
