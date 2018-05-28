@@ -75,10 +75,10 @@
     }
     .counter {
       .font-small();
-      &:before {
+      &::before {
         content: '(';
       }
-      &:after {
+      &::after {
         content: ')';
       }
     }
@@ -107,7 +107,7 @@
       a {
         position: relative;
         .icon(@content: @icon-next, @size: 7px, @sr-only: true);
-        &:after {
+        &::after {
           position: absolute;
           .margin(top, -.25rem);
           top: 45%;
@@ -600,7 +600,7 @@ p.note {
 .field.required,
 .field._required {
   > .label {
-    &:after {
+    &::after {
       content: '*';
       .margin(left, small);
       color: @primary;
@@ -609,7 +609,7 @@ p.note {
   // @FIX required inside required
   & & {
     > .label {
-      &:after {
+      &::after {
         .display(none);
       }
     }
