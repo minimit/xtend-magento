@@ -77,38 +77,27 @@ button,
     &:extend(.overlay all);
   }
   .modal-inner-wrap {
-    &:extend(.overlay > .overlay-inner all);
+    &:extend(.overlay-inner all);
+    &:extend(.overlay .overlay-inner all);
   }
-  &.overlay-screen {
-    .modal-outer-wrap {
-      &:extend(.overlay.overlay-screen all);
-    }
-    .modal-inner-wrap {
-      &:extend(.overlay.overlay-screen > .overlay-inner all);
-    }
-    .modals-overlay {
-      display: none;
-    }
+  .action-close {
+    .overlay .overlay-inner > .btn-close();
+  }
+  .modals-overlay {
+    &:extend(.xt-backdrop all);
+  }
+  .modal-header, .modal-title {
+    .h2();
   }
   &._show {
     &:extend(.overlay-outer.active all);
-    .modal-outer-wrap {
-      &:extend(.overlay-outer.active > .overlay all);
-    }
     .modal-inner-wrap {
-      &:extend(.overlay-outer.active > .overlay > .overlay-inner all);
+      &:extend(.overlay-outer.active .overlay-inner all);
     }
-    .action-close {
-      .overlay-outer.active > .overlay > .overlay-inner > .btn-close();
+    .modals-overlay {
+      &:extend(.xt-backdrop.active all);
     }
   }
-  .action-close {
-    .overlay > .overlay-inner > .btn-close();
-  }
-}
-
-.modals-overlay {
-  &:extend(.xt-backdrop all);
 }
 
 body._has-modal {

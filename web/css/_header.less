@@ -302,7 +302,9 @@ html.nav-open {
     animation-name: anim-header-mobile;
   }
   .header-mobile-backdrop {
-    .anim-backdrop.active();
+    &:before {
+      .xt-backdrop.active();
+    }
   }
 }
 @keyframes anim-header {

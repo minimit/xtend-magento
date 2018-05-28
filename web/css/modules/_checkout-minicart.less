@@ -24,6 +24,9 @@
     .btn-icon();
     .btn-primary();
     .icon(@content: @icon-cart, @size: @icon-big, @sr-only: false);
+    &:after {
+      float: left;
+    }
     .text,
     .counter-label {
       .sr-only();

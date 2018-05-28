@@ -29,6 +29,13 @@
     .display(none);
   }
   .swatch-option {
+    &.color {
+      border: 1px solid @secondary;
+      border-radius: @border-radius;
+      &:before {
+        display: none !important;
+      }
+    }
     &.text {
       .btn();
       .btn-tiny();

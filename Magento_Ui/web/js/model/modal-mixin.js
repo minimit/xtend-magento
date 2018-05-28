@@ -25,11 +25,9 @@ define([
         this.modal.wrapInner('<div class="modal-outer-wrap"></div>');
       }
       // @FIX .modals-overlay position
-      this.overlay = $(this.modal).find(' .modal-outer-wrap').append(this.modalWrapper.find('.' + this.options.overlayClass));
-      // @FIX .overlay-screen .action-close
-      if (this.modal.hasClass('overlay-screen')) {
-        this.modal.find('.action-close').appendTo(this.modal.find('.modal-outer-wrap'));
-      }
+      this.overlay = $(this.modal).append(this.modalWrapper.find('.' + this.options.overlayClass));
+      // @FIX .action-close
+      this.modal.find('.action-close').appendTo(this.modal.find('.modal-inner-wrap'));
       // return
       return result;
     });
