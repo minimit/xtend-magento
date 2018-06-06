@@ -6,11 +6,13 @@
 
 .filter {
   .block-title {
-    .display(none, sm);
     .block();
     .btn();
     .btn-secondary();
     .btn-caret();
+    @media @min-sm {
+      .display(none) !important;
+    }
   }
   .block-subtitle {
     .block();

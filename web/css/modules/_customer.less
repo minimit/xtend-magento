@@ -2,46 +2,29 @@
 // account
 //////////////////////
 
-// .login-container
+// login
 
-.login-container {
-  .flex();
-  .align-items-stretch();
-  .customer-login-wrapper,
-  .customer-new-wrapper {
-    .col(12);
-    .col(6, sm);
-  }
-  .block-customer-login,
-  .block-new-customer {
-    .box();
-    .box-giant();
-  }
-  // content
+.block-new-customer {
   .block-title {
-    .h4();
+    .h5();
+    .margin(top, giant) !important;
+  }
+  .block-content {
+    p {
+      .note();
+    }
   }
 }
 
-// .form.create.account
-
-.form.create.account {
-  .box();
-  .box-giant();
-  max-width: 62.5rem;
+#password-strength-meter-label {
+  .font-sans-semibold();
+  color: @text;
 }
 
-// .form.password.forget
+// forgot-password
 
-.form.password.forget {
-  .box();
-  .box-giant();
-  max-width: 62.5rem;
-  // content
-  .field.captcha.no-label {
-    margin: 0;
-    .margin(top, medium);
-  }
+.field.captcha {
+  .margin(top, medium);
   .captcha-image {
     .list();
     .list-space(small);
@@ -71,6 +54,7 @@
   // actions
   .box-actions {
     .actions-toolbar();
+    .margin(top, none);
     .action {
       .btn-small();
       .btn-narrow();
@@ -103,9 +87,11 @@
         .col(12, sm);
       }
       // reset box
-      border-color: transparent;
-      background-color: transparent;
       color: inherit;
+      &:before {
+        border-color: transparent;
+        background-color: transparent;
+      }
     }
   }
   // box
@@ -147,11 +133,13 @@
 
 .block-collapsible-nav {
   .title {
-    .display(none, sm);
     .block();
     .btn();
     .btn-secondary();
     .btn-caret();
+    @media @min-sm {
+      .display(none) !important;
+    }
   }
   .content {
     .display(none);

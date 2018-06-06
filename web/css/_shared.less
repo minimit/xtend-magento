@@ -17,26 +17,38 @@
   }
 }
 
-// .cms-page-view
+// custom layout
+
+.customer-account-login,
+.customer-account-create,
+.customer-account-forgotpassword,
+.customer-account-logoutsuccess {
+  // add here custom layout styles for pages
+  .column.main,
+  .page-title {
+    .col(12);
+    .col(8, sm);
+    .col(7, md);
+    .col(6, lg);
+    .margin(x, auto);
+  }
+  .page-title-wrapper {
+    .padding(x, 1rem, sm); // fix columns different percent size
+    .page-title {
+      .h5-block();
+    }
+  }
+}
+
+// cms pages styles
 
 .cms-page-view {
-  /*
-  .page-main {
-    .margin(top, giant);
+  // add here custom styles for cms pages
+  .column.main {
+    table {
+      .table();
+    }
   }
-  h2 {
-    .h3();
-  }
-  h3 {
-    .h4();
-  }
-  h4, h5, h6 {
-    .h5();
-  }
-  table {
-    .table();
-  }
-  */
 }
 
 // .sidebar
@@ -90,6 +102,7 @@
 //////////////////////
 
 .breadcrumbs-wrapper {
+  //.display(none); // use this to remove breadcrumbs not the xml or meta title doesn't populate
   background-color: @grey-250;
 }
 .breadcrumbs {
@@ -123,6 +136,23 @@
         .disabled();
       }
     }
+  }
+}
+
+//////////////////////
+// .actions-toolbar
+//////////////////////
+
+.actions-toolbar {
+  .list();
+  .list-space(small);
+  .justify-content-end();
+  .margin(top, medium);
+  div.primary {
+    .margin(left, auto) !important; // makes .primary on right and .secondary on left
+  }
+  a, button {
+    .btn-small();
   }
 }
 
@@ -257,23 +287,6 @@
     .btn-icon();
     .btn-secondary-empty();
     .btn-secondary-empty.active();
-  }
-}
-
-//////////////////////
-// .actions-toolbar
-//////////////////////
-
-.actions-toolbar {
-  .padding(top, medium) !important;
-  .list();
-  .list-space(small);
-  .justify-content-end();
-  div.primary {
-    .margin(left, auto) !important; // makes .primary on right and .secondary on left
-  }
-  a, button {
-    .btn-small();
   }
 }
 
