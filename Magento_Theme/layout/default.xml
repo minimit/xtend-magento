@@ -32,6 +32,24 @@
             </container>
         </referenceContainer>
 
+        <!-- messages -->
+
+        <move element="page.messages" destination="page.messages.inner" />
+        <referenceContainer name="page.wrapper">
+            <container name="page.messages.wrapper" htmlTag="div" htmlClass="messages-wrapper"
+                       after="breadcrumbs.wrapper">
+                <container name="page.messages.inner" htmlTag="div" htmlClass="container"/>
+            </container>
+        </referenceContainer>
+
+        <move element="messages" destination="messages.inner"/>
+        <referenceContainer name="page.wrapper">
+            <container name="messages.wrapper" htmlTag="div" htmlClass="messages-wrapper"
+                       after="breadcrumbs.wrapper">
+                <container name="messages.inner" htmlTag="div" htmlClass="container"/>
+            </container>
+        </referenceContainer>
+
         <!-- remove -->
 
         <referenceBlock name="header.panel.wrapper" remove="true"/>

@@ -556,31 +556,25 @@ dl.product.options {
 // messages
 //////////////////////
 
-// .page.messages
+// .messages
 
-.page.messages {
-  .block();
-  .messages {
-    // page spacing
-    .message {
-      .margin(bottom, big) !important;
-      form & {
-        .margin(bottom, none) !important;
-      }
-    }
-    // sequential spacing
-    & + .messages {
+.messages-wrapper {
+  > .container {
+    > div {
+      // page spacing
       .message {
-        .margin(top, -2rem);
+        .margin(top, medium) !important;
+        form & {
+          .margin(top, none) !important;
+        }
       }
     }
   }
 }
 
-// .message
-
 .message {
   .alert();
+  .margin(all, none);
   &.success {
     .alert-success();
   }
@@ -588,10 +582,10 @@ dl.product.options {
   &.info {
     .alert-notice();
   }
-  .warning {
+  &.warning {
     .alert-warning();
   }
-  .error {
+  &.error {
     .alert-error();
   }
   // animations
