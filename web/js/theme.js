@@ -22,14 +22,32 @@ require(modules, function (ko, $) {
   // Body padding on fixed
   //////////////////////
 
-  // add padding when disabling scrollbar
   window.xtScrollbarFixed = function () {
-    $('body').css('padding-right', $.scrollbarWidth());
-    $('.modals-overlay').css('right', $.scrollbarWidth());
+    if (!$('.overlay-outer:visible').length) {
+      $('html, .xt-fixed').css('padding-right', $.scrollbarWidth());
+      $('.modals-overlay').css('right', $.scrollbarWidth());
+      var $elements = $('html, .xt-fixed');
+      $elements.addClass('no-transition');
+      XtUtil.requestAnimationFrame.call(window, function () {
+        $elements.css('padding-right', $.scrollbarWidth());
+        XtUtil.requestAnimationFrame.call(window, function () {
+          $elements.removeClass('no-transition');
+        });
+      });
+    }
   };
   window.xtScrollbarNormal = function () {
-    $('body').css('padding-right', '');
-    $('.modals-overlay').css('right', '');
+    if (!$('.overlay-outer:visible').length) {
+      $('.modals-overlay').css('right', '');
+      var $elements = $('html, .xt-fixed');
+      $elements.addClass('no-transition');
+      XtUtil.requestAnimationFrame.call(window, function () {
+        $elements.css('padding-right', '');
+        XtUtil.requestAnimationFrame.call(window, function () {
+          $elements.removeClass('no-transition');
+        });
+      });
+    }
   };
 
   //////////////////////
