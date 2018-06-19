@@ -13,27 +13,30 @@
         'Magento_Ui/js/modal/modal'
     ], function($, modal){
 
-        // make modal-test-1
-        var modaltest1 = {
-            type: 'popup',
-            responsive: true,
-            innerScroll: true,
-            modalClass: 'modal-test-1',
-            title: $.mage.__('Lorem ipsum'),
-            buttons: [{
-                text: $.mage.__('Close'),
-                class: '',
-                click: function () {
-                    this.closeModal();
-                }
-            }]
-        };
+      // make modal-test-1
+      var modaltest1 = {
+        type: 'popup',
+        responsive: true,
+        innerScroll: true,
+        trigger: '.open-modal-test-1',
+        modalClass: 'modal-test-1',
+        title: $.mage.__('Lorem ipsum'),
+        buttons: [{
+          text: $.mage.__('Close'),
+          class: '',
+          click: function () {
+            this.closeModal();
+          }
+        }]
+      };
+      modal(modaltest1, $('#modal-test-1'));
 
-        // open modal-test-1
-        modal(modaltest1, $('#modal-test-1'));
-        $('.open-modal-test-1').on('click',function(){
-            $('#modal-test-1').modal('openModal');
-        });
+      // open modal-test-1
+      /*
+      $('.open-modal-test-1').on('click',function(){
+        $('#modal-test-1').modal('openModal');
+      });
+      */
 
     });
 </script>
