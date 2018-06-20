@@ -220,8 +220,13 @@
   form + form {
     .margin(top, giant);
   }
-  legend {
-    .display(none);
+  .field.street {
+    label.label {
+      display: none;
+    }
+    .field:first-child {
+      .padding(all, none) !important;
+    }
   }
 }
 
