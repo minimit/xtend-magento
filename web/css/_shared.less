@@ -444,7 +444,7 @@ dl.product.options {
 // some tables
 
 .table-wrapper:not(.cart) {
-  .table-scroll();
+  &:extend(.table-scroll all);
   // columns
   .col.name,
   .col.product,
@@ -466,10 +466,10 @@ dl.product.options {
     white-space: nowrap;
   }
   // buttons
-  .action:not(.primary) {
+  .action {
     .btn();
-    .btn-tiny();
     .btn-secondary();
+    .btn-tiny();
     white-space: nowrap;
   }
   th .action.edit {
