@@ -417,17 +417,18 @@ dl.product.options {
 // totals
 //////////////////////
 
-tr.subtotal, tr.shipping {
-  th {
-    .font-big() !important;
-  }
-  td {
-    .font-big() !important;
+.table.totals, .table-order-items tfoot {
+  tr {
+    th {
+      .font-big() !important;
+    }
+    td {
+      .font-big() !important;
+    }
   }
 }
 
-tr.grand_total,
-tr.grand.totals {
+tr.grand_total, tr.grand.totals {
   th strong {
     .font-giant() !important;
     strong {
