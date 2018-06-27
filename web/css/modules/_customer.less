@@ -43,21 +43,18 @@
 
 // dashboard
 
-.block-dashboard-info,
-.block-dashboard-addresses,
-.block-dashboard-orders,
-.block-order-details-view,
-.block-addresses-default,
-.block-addresses-list,
-.block-reviews-dashboard,
-.block-order-details-gift-message {
+body.account,
+.multicheckout {
   // actions
   .box-actions {
     .actions-toolbar();
-    .margin(top, none);
+    .list-space(medium);
+    .justify-content-start();
+    .margin(top, tiny);
     .action {
+      .btn();
       .btn-small();
-      .btn-narrow();
+      .btn-none();
       .btn-link();
     }
   }
@@ -71,11 +68,14 @@
     .display(flex);
     .align-items-center();
     .justify-content-between();
-    .h4();
+    strong {
+      .h4();
+    }
     .action {
       .btn();
-      .btn-secondary();
-      .btn-tiny();
+      .btn-small();
+      .btn-none();
+      .btn-link();
     }
   }
   .block-content {
@@ -103,25 +103,46 @@
     .box();
     .box-small();
   }
-}
-
-// others
-
-.form-address-edit,
-.form-edit-account,
-.form-newsletter-manage {
-  .box();
-  .box-big();
-}
-
-.block-addresses-default {
-  .block-content {
-    .flex();
-    .align-items-stretch();
+  // others
+  /*
+  .block-addresses-list {
+    .items.addresses {
+      .flex();
+      li.item {
+        .col(12);
+        .col(6, md);
+        .item-inner {
+          .padding(all, medium);
+          border: 1px solid @grey-250;
+          .font-small();
+        }
+      }
+      .actions {
+        .actions-toolbar();
+        .list-space(medium);
+        .justify-content-start();
+        .margin(top, tiny);
+        .action {
+          .btn();
+          .btn-tiny();
+          .btn-none();
+          .btn-link();
+        }
+      }
+    }
   }
-  // content
-  .block-title {
-    .h4();
+  */
+  .actions-toolbar {
+    .actions {
+      .list();
+      .list-space(small);
+    }
+    .action {
+      .btn-small();
+    }
+  }
+  .payment-method {
+    .dl-line();
   }
 }
 
