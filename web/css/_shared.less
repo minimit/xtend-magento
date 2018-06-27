@@ -561,6 +561,7 @@ dl.product.options {
 .messages-wrapper {
   > .container {
     > div {
+      /*
       // page spacing
       .message {
         .margin(top, medium) !important;
@@ -568,13 +569,22 @@ dl.product.options {
           .margin(top, none) !important;
         }
       }
+      */
     }
   }
 }
 
 .message {
   .alert();
+  // spacing
   .margin(all, none);
+  & + & {
+    .margin(top, small);
+  }
+  .messages & {
+    .margin(top, small);
+  }
+  // variant
   &.success {
     .alert-success();
   }
