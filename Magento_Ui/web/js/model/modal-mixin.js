@@ -25,7 +25,7 @@ define([
         this.modal.wrapInner('<div class="modal-outer-wrap"></div>');
       }
       // @FIX .modals-overlay position
-      this.overlay = $(this.modal).append(this.modalWrapper.find('.' + this.options.overlayClass));
+      this.overlay = $(this.modal).append(this.modalWrapper.find('.' + this.options.overlayClass).css('z-index', ''));
       // @FIX .action-close
       this.modal.find('.action-close').appendTo(this.modal.find('.modal-inner-wrap'));
       // return
@@ -50,14 +50,6 @@ define([
       $(this.focussedElement).focus();
       this._unsetActive();
       _.defer(trigger, this);
-    });
-
-    modal.prototype._setActive = wrapper.wrap(modal.prototype._setActive, function (original) {
-      var result = original();
-      // @FIX reliable z-index
-      this.modal.find('.modal-inner-wrap').css('z-index', 200);
-      // return
-      return result;
     });
 
     modal.prototype._destroyOverlay = wrapper.wrap(modal.prototype._destroyOverlay, function (original) {
