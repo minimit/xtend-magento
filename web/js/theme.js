@@ -74,6 +74,7 @@ require(modules, function (ko, $) {
     $qty.addClass('input-number');
     var $control = $element.parent();
     $control.addClass('input-group-number');
+    // populate
     var $group = $control.wrapInner('<div class="input-group"></div>');
     if (stack) {
       $control.find('.input-group').append('<span class="input-group-stack">' +
@@ -89,17 +90,23 @@ require(modules, function (ko, $) {
         '<button type="button" class="btn input-number-add"><span>+</span></button>' +
         '</span>');
     }
+    // validate
+    inputNumberValidate($element.parents('.input-group-number'), $element.val());
   };
 
-  $(document).ready(function (e) {
-    $('input.qty').each(function () {
+  function populateQtyAsync($container) {
+    $container.find('input.qty, input.item-qty').each(function () {
       var $element = $(this);
       if ($element.parents('.product-info-main').length) {
-        populateQty($(this));
+        populateQty($element);
       } else {
-        populateQty($(this), true);
+        populateQty($element, true);
       }
     });
+  }
+
+  $(document).ready(function (e) {
+    populateQtyAsync($('body'));
   });
 
   // core
@@ -108,7 +115,7 @@ require(modules, function (ko, $) {
     var $remove = $container.find('.input-number-remove');
     var $add = $container.find('.input-number-add');
     var $input = $container.find('.input-number');
-    var inputNumberMin = parseFloat($input.attr('data-minusplus-min')) || 0;
+    var inputNumberMin = parseFloat($input.attr('data-minusplus-min')) || 1;
     var inputNumberMax = parseFloat($input.attr('data-minusplus-max')) || Infinity;
     $remove.removeAttr('disabled');
     $add.removeAttr('disabled');
