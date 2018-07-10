@@ -157,6 +157,19 @@ require(modules, function (ko, $) {
   });
 
   //////////////////////
+  // Magento
+  //////////////////////
+
+  // remove empty p
+
+  $('p').each(function() {
+    var $this = $(this);
+    if($this.html().replace(/<!--[\s\S]*?-->/g, '').replace(/\s|&nbsp;/g, '').length == 0) {
+      $this.remove();
+    }
+  });
+
+  //////////////////////
   // xtend
   //////////////////////
 
