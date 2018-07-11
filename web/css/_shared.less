@@ -602,21 +602,15 @@ tr.grand_total, tr.grand.totals {
     .margin(top, small);
   }
   // variant
-  &.success {
-    .alert-success();
-  }
+  &.success,
   &.notice,
   &.info {
-    .alert-notice();
+    .alert-grey();
   }
-  &.warning {
-    .alert-warning();
-  }
+  &.warning,
   &.error {
-    .alert-error();
+    .alert-primary();
   }
-  // animations
-  .anim-vertical.active();
 }
 
 // .note
@@ -655,7 +649,7 @@ p.note {
 .input-control {
   &[aria-invalid="true"],
   &.mage-error {
-    border-color: @error;
+    border-color: @primary;
   }
 }
 
@@ -663,9 +657,21 @@ p.note {
 
 div.field-error,
 div.mage-error {
-  .note();
-  .note-error();
+  .alert();
+  .alert-primary();
+  .box-tiny();
+  .margin(top, none);
   text-align: inherit;
+  // space
+  .swatch-input ~ &,
+  input[type="checkbox"] ~ &,
+  input[type="radio"] ~ & {
+    .margin(top, small);
+  }
+  .input-group & {
+    position: absolute;
+    top: 100%;
+  }
 }
 
 //////////////////////
@@ -676,6 +682,17 @@ div.mage-error {
 
 .field-tooltip {
   .note();
+}
+
+._with-tooltip {
+  .display(flex);
+  .flex-column();
+  div.field-error {
+    .order(1);
+  }
+  .field-tooltip {
+    .order(2);
+  }
 }
 
 // overlay
