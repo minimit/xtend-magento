@@ -1,4 +1,4 @@
-var modules = ['ko', 'jquery', 'xtend'];
+var modules = ['ko', 'jquery', 'xtend', 'polyfill'];
 require(modules, function (ko, $) {
 
   'use strict';
