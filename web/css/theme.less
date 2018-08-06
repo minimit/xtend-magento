@@ -75,6 +75,9 @@
 
 // icons
 
+@icons: menu, search, cart, edit, arrow-up, arrow-down, wishlist, wishlist-empty, trash, prev, next, grid, list, star,
+star-empty, compare, compare-empty, envelope, checkmark, remove; // this will generate classes .icon-{name}
+
 @icon-menu: '\e609';
 @icon-search: '\e615';
 @icon-cart: '\e611';
@@ -130,64 +133,3 @@
 @icon-arrow-down-thin: '\e626';
 @icon-arrow-left-thin: '\e625';
 @icon-arrow-right-thin: '\e624';
-
-// generate icons
-// USAGE LESS: .icon(@content: @icon-menu, @size: @icon-small, @sr-only: false, @position: after);
-// USAGE MARKUP: <span class="icon-menu"></span>
-
-@icons: menu, search, cart, edit, arrow-up, arrow-down,
-wishlist, wishlist-empty, trash, prev, next, grid, list, star, star-empty, compare, compare-empty, envelope, info,
-success, error, warning, update, print, account, download, private, present, lock, calendar, return, settings, location,
-collapse, calendar, pointer-up, pointer-down, pointer-left, pointer-right, flag, expand, comment,
-comment-reflected, help, arrow-up-thin, arrow-down-thin, arrow-left-thin, arrow-right-thin; // this will generate classes .icon-{name}
-
-.icon(@content, @size: @icon-medium, @sr-only: false, @position: after) {
-  & when (@sr-only = true) {
-    > span {
-      .sr-only();
-    }
-  }
-  & when (@position = before) {
-    &::before {
-      .icon();
-      content: '@{content}';
-      font-size: @size;
-    }
-  }
-  & when (@position = after) {
-    &::after {
-      .icon();
-      content: '@{content}';
-      font-size: @size;
-    }
-  }
-}
-
-& when (@classes-icons) {
-  
-  .generate-icons();
-  .generate-icons(@i:length(@icons)) when (@i > 0) {
-    .generate-icons(@i - 1);
-    @name: extract(@icons, @i);
-    @val: ~"icon-@{name}";
-    .icon-@{name} {
-      &::before {
-        content: @@val;
-      }
-    }
-  }
-  
-}
-
-// icons styles
-
-.icon {
-  //.icon(); // needed if classes changes
-  font-family: @icons-family;
-}
-
-[class^='icon-'], [class*=' icon-'] {
-  &::before {
-    .icon();
-  }
-}
