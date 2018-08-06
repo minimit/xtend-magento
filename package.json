@@ -17,7 +17,7 @@
     "postversion": "git push && git push --tags && npm publish"
   },
   "dependencies": {
-    "xtend-library": "^0.4.28"
+    "xtend-library": "^0.4.31"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

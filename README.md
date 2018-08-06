@@ -23,7 +23,7 @@ mkdir -p web/xtend-library/
 cp -r node_modules/xtend-library/ web/xtend-library/
 ```
 
-After in `theme.less` put package manager xtend-library core path and put xtend-library theme path.
+After in `theme.less` put xtend-library dist path.
 
 ### Compilation
 
