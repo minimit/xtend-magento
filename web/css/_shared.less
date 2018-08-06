@@ -534,11 +534,12 @@ tr.grand_total, tr.grand.totals {
     }
   }
   .input-group-stack {
+    width: 20px;
     .btn {
       padding: 0 .3em;
       > span {
         position: relative;
-        margin: 0 -1em;
+        margin: .1em -1em;
       }
     }
   }
@@ -553,7 +554,8 @@ tr.grand_total, tr.grand.totals {
 }
 
 .loading-mask {
-  .loader-mask();
+  .preload-container();
+  .preload-full();
   // custom
   .sidebar &,
   .cart-summary & {
@@ -561,7 +563,7 @@ tr.grand_total, tr.grand.totals {
   }
   // content
   .loader {
-    .loader-content();
+    .preload();
     > img,
     > p {
       .display(none);
