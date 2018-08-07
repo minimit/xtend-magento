@@ -12,7 +12,6 @@
   .display(block);
   .float(left);
   width: 100%;
-  overflow: hidden; // fix ipad outside space
 }
 
 // 1column
@@ -278,6 +277,7 @@ body:not(.page-layout-full) {
   .display(flex);
   .flex-column();
   min-height: 100vh;
+  overflow: hidden; // fix mobile scroll outside
 }
 .main-container {
   .flex-auto();
