@@ -25,13 +25,15 @@
                 <div class="header-main-links">
                     <div class="header-main-links-inner list list-space-none">
                         <div>
-                            <div class="drop-container" data-xt-drop>
+                            <div class="drop-outer" data-xt-drop>
                                 <button type="button" class="btn btn-primary btn-tiny">
                                     <?= __('My Account') ?>
                                 </button>
                                 <div class="drop">
                                     <div class="drop-inner">
-                                        <?= $block->getChildHtml('header.links.store') ?>
+                                        <div class="content">
+                                            <?= $block->getChildHtml('header.links.store') ?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

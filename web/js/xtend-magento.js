@@ -6,6 +6,6 @@
 // xtend
 //////////////////////
 
-import {XtUtil} from 'xtend-library/src/scripts/xtend-utils';
+import {Xt} from 'xtend-library/src/scripts/xtend';
 
 //////////////////////

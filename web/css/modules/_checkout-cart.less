@@ -6,6 +6,8 @@
 
 .cart-summary {
   .box();
+  .box > .content();
+  .box-white();
   .summary.title {
     .display(inline-block);
     .h4();
@@ -157,11 +159,15 @@
 // .block.discount
 
 .block.discount {
+  .box();
+  .box > .content();
+  .box-white();
   .title {
     margin: 0;
     .btn();
     .btn-caret();
-    .padding(x, none);
+    .btn-nodesign();
+    .btn-none-x();
   }
   &.active {
     .title {

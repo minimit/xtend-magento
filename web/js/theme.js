@@ -28,9 +28,9 @@ require(modules, function (ko, $) {
       $('.modals-overlay').css('right', $.scrollbarWidth());
       var $elements = $('html, .xt-fixed');
       $elements.addClass('no-transition');
-      XtUtil.requestAnimationFrame.call(window, function () {
+      Xt.requestAnimationFrame.call(window, function () {
         $elements.css('padding-right', $.scrollbarWidth());
-        XtUtil.requestAnimationFrame.call(window, function () {
+        Xt.requestAnimationFrame.call(window, function () {
           $elements.removeClass('no-transition');
         });
       });
@@ -41,9 +41,9 @@ require(modules, function (ko, $) {
       $('.modals-overlay').css('right', '');
       var $elements = $('html, .xt-fixed');
       $elements.addClass('no-transition');
-      XtUtil.requestAnimationFrame.call(window, function () {
+      Xt.requestAnimationFrame.call(window, function () {
         $elements.css('padding-right', '');
-        XtUtil.requestAnimationFrame.call(window, function () {
+        Xt.requestAnimationFrame.call(window, function () {
           $elements.removeClass('no-transition');
         });
       });
@@ -176,7 +176,7 @@ require(modules, function (ko, $) {
   // init all
 
   function initAll() {
-    XtUtil.initAll();
+    Xt.initAll();
   }
 
   if (document.readyState === "loading") {

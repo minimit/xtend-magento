@@ -25,7 +25,7 @@
   }
   .rating-result {
     position: relative;
-    .icon(@content: @icon-star @icon-star @icon-star @icon-star @icon-star, @size: 1.25rem, @sr-only: false);
+    .icon(@content: ~"@{icon-star} @{icon-star} @{icon-star} @{icon-star} @{icon-star}", @size: 1.25rem, @sr-only: false);
     &::after {
       position: absolute;
       z-index: 1;
@@ -39,7 +39,7 @@
     > span {
       display: block;
       overflow: hidden;
-      .icon(@content: @icon-star @icon-star @icon-star @icon-star @icon-star, @size: 1.25rem, @sr-only: true);
+      .icon(@content: ~"@{icon-star} @{icon-star} @{icon-star} @{icon-star} @{icon-star}", @size: 1.25rem, @sr-only: true);
       &::after {
         display: block;
         z-index: 2;
@@ -109,13 +109,6 @@
   .review-control-vote {
     .form-group-small();
     .form-group-inline();
-    // fix no right markup
-    .input-special, input[type=checkbox], input[type=radio] {
-      .margin(right, none) !important;
-    }
-    label {
-      .margin(left, none) !important;
-    }
   }
   .action.submit {
     .btn-giant();

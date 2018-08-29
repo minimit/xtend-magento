@@ -5,11 +5,11 @@
 // wrapper
 
 .search-wrapper {
-  .drop-container();
+  .drop-outer();
   @media @max-sm {
-    .drop-container-static();
+    .drop-outer-static();
     .drop {
-      .drop-container-static .drop();
+      .drop-outer-static .drop();
     }
   }
   @media @min-sm {

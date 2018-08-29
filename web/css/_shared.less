@@ -485,8 +485,8 @@ tr.grand_total, tr.grand.totals {
   // buttons
   .action {
     .btn();
-    .btn-secondary();
     .btn-tiny();
+    .btn-secondary();
     white-space: nowrap;
   }
   th .action.edit {
@@ -555,12 +555,11 @@ tr.grand_total, tr.grand.totals {
 
 .loading-mask {
   .preload-container();
+  .preload-background();
   .preload-full();
-  // custom
-  .sidebar &,
-  .cart-summary & {
-    background-color: fade(@grey-250, 60%);
-  }
+  // reset
+  position: absolute !important;
+  padding-bottom: 0 !important;
   // content
   .loader {
     .preload();
@@ -595,6 +594,7 @@ tr.grand_total, tr.grand.totals {
 
 .message {
   .alert();
+  .box > .content();
   // spacing
   .margin(top, medium);
   & + & {
@@ -604,11 +604,10 @@ tr.grand_total, tr.grand.totals {
   &.success,
   &.notice,
   &.info {
-    .alert-grey();
   }
   &.warning,
   &.error {
-    .alert-primary();
+    .box-primary();
   }
 }
 
@@ -657,8 +656,9 @@ p.note {
 div.field-error,
 div.mage-error {
   .alert();
-  .alert-primary();
+  .box > .content();
   .box-tiny();
+  .box-primary();
   .margin(top, none);
   text-align: inherit;
   // space

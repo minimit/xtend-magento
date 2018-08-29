@@ -5,11 +5,11 @@
 // wrapper
 
 .minicart-wrapper {
-  .drop-container();
+  .drop-outer();
   @media @max-sm {
-    .drop-container-static();
+    .drop-outer-static();
     .drop {
-      .drop-container-static .drop();
+      .drop-outer-static .drop();
     }
   }
   @media @min-sm {
@@ -44,11 +44,21 @@
   .ui-dialog & {
     .box();
     .box-medium() !important;
-    .padding(top, 35px) !important;
-    .padding(bottom, medium) !important;
+    > .content {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      > #minicart-content-wrapper > .block-content {
+        .padding(top, 35px) !important;
+      }
+    }
   }
   .block-title {
     .display(none);
+  }
+  .action.close {
+    position: absolute;
+    top: 2px;
+    right: 2px;
   }
 }
 
@@ -90,6 +100,7 @@
     .action.checkout {
       .btn();
       .btn-big();
+      .btn-primary();
       .block();
       .text-align(center);
     }

@@ -5,7 +5,7 @@
 button,
 .action.primary {
   &:extend(.btn all);
-  .btn-primary();
+  &:extend(.btn-primary all);
   &.abs-button-s {
     .btn-small();
   }
@@ -31,7 +31,7 @@ button,
 //////////////////////
 
 .ui-dialog-container {
-  &:extend(.drop-container all);
+  &:extend(.drop-outer all);
   &.active {
     .ui-dialog {
       &:extend(.drop.active all);
@@ -47,11 +47,11 @@ button,
   }
 }
 
-.ui-dialog-content > ul, ul.dropdown { // ul.dropdown for store/switch
+.ui-dialog-content > .content > ul, ul.dropdown { // ul.dropdown for store/switch
   .list();
   .list-drop();
-  &:extend(.drop > .drop-inner > .list-drop all);
-  .drop > .drop-inner > .list() !important;
+  &:extend(.drop > .drop-inner > .content > .list-drop all);
+  .drop > .drop-inner > .content > .list() !important;
 }
 
 // @FIX toggle
@@ -93,6 +93,9 @@ button,
     &:extend(.overlay-outer.active all);
     .modal-inner-wrap {
       &:extend(.overlay-outer.active .overlay-inner all);
+    }
+    .action-close {
+      .overlay-outer.active .overlay-inner > .btn-close();
     }
     .modals-overlay {
       &:extend(.xt-backdrop.active all);
@@ -247,7 +250,6 @@ legend + br {
 .action.print,
 .action.back {
   .btn();
-  .btn-secondary();
 }
 .action.skip {
   .sr-only();
@@ -255,7 +257,6 @@ legend + br {
 .action.close,
 .action-close {
   .btn-close();
-  .box > .btn-close();
 }
 
 .no-display {

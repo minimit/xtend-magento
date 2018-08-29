@@ -17,6 +17,8 @@ define([
       var result = original();
       // @FIX .ui-dialog-container
       $(this.options.appendTo).addClass('ui-dialog-container');
+      // @FIX .content
+      $(this.options.appendTo).find('.ui-dialog-content').wrapInner('<div class="content"></div>');
       // return
       return result;
     });

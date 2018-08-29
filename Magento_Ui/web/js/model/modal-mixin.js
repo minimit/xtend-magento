@@ -10,6 +10,8 @@ define([
       // @FIX default values
       this.options.overlayClass = 'modals-overlay';
       this.options.parentModalClass = '_has-modal';
+      // @FIX .content
+      $(this.options.appendTo).find('.modal-inner-wrap').wrapInner('<div class="content"></div>');
       // return
       return result;
     });
