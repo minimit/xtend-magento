@@ -35,13 +35,13 @@ gulp.task('less:watch', function (done) {
 
 gulp.task('js', function () {
   var b = browserify({
-    entries: 'web/js/xtend-magento.js',
+    entries: 'web/js/xtend.js',
     debug: true
   });
   const version = JSON.parse(fs.readFileSync('package.json')).version;
   var banner = "/*! xtend-magento v" + version + " (https://getxtend.com/)\n" + "@copyright (c) 2017 - 2018 Riccardo Caroli\n" + "@license MIT (https://github.com/minimit/xtend-library/blob/master/LICENSE) */";
   return b.bundle()
-    .pipe(source('xtend-magento.min.js'))
+    .pipe(source('xtend.min.js'))
     .pipe(replace(/\/\*\![^\*]+\*\//, banner))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
@@ -54,7 +54,7 @@ gulp.task('js', function () {
     .pipe(gulp.dest('web/js/'));
 });
 gulp.task('js:watch', function (done) {
-  gulp.watch(['web/js/xtend-magento.js'], gulp.series('js'));
+  gulp.watch(['web/js/xtend.js'], gulp.series('js'));
   done();
 });
 

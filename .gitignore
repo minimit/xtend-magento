@@ -37,5 +37,5 @@ config.codekit3
 # compiled
 web/css/theme.css
 web/css/theme.css.map
-web/js/xtend-magento.min.js
-web/js/xtend-magento.min.js.map
+web/js/xtend.min.js
+web/js/xtend.min.js.map

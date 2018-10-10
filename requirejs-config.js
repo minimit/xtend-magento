@@ -1,6 +1,6 @@
 var config = {
   paths: {
-    'xtend': 'js/xtend-magento.min',
+    'xtend': 'js/xtend.min',
     'polyfill': 'js/polyfill.min'
   },
   config: {
