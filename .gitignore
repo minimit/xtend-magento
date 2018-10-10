@@ -33,3 +33,9 @@ node_modules
 vendor
 prepros.cfg
 config.codekit3
+
+# compiled
+web/css/theme.css
+web/css/theme.css.map
+web/js/xtend-magento.min.js
+web/js/xtend-magento.min.js.map
