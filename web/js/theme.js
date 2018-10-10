@@ -77,16 +77,16 @@ require(modules, function (ko, $) {
     // populate
     var $group = $control.wrapInner('<div class="input-group"></div>');
     if (stack) {
-      $control.find('.input-group').append('<span class="input-group-stack">' +
+      $control.find('.input-group').append('<span class="input-group-inner input-group-grey input-group-stack">' +
         '<button type="button" class="btn input-number-add"><span>+</span></button>' +
         '<button type="button" class="btn input-number-remove"><span>-</span></button>' +
         '</span>');
 
     } else {
-      $control.find('.input-group').prepend('<span class="input-group-line">' +
+      $control.find('.input-group').prepend('<span class="input-group-inner input-group-grey input-group-line">' +
         '<button type="button" class="btn input-number-remove"><span>-</span></button>' +
         '</span>');
-      $control.find('.input-group').append('<span class="input-group-line">' +
+      $control.find('.input-group').append('<span class="input-group-inner input-group-grey input-group-line">' +
         '<button type="button" class="btn input-number-add"><span>+</span></button>' +
         '</span>');
     }

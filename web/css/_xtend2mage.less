@@ -34,7 +34,7 @@ button,
   &:extend(.drop-outer all);
   &.active {
     .ui-dialog {
-      &:extend(.drop.active all);
+      &:extend(.drop-outer.active > .drop all);
     }
   }
 }
