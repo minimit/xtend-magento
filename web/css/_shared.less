@@ -608,6 +608,9 @@ tr.grand_total, tr.grand.totals {
   &.warning,
   &.error {
     .box-primary();
+    > * {
+      .box-primary > .content();
+    }
   }
 }
 
@@ -658,7 +661,9 @@ div.mage-error {
   .alert();
   .box > .content();
   .box-tiny();
+  .box-tiny > .content();
   .box-primary();
+  .box-primary > .content();
   .margin(top, none);
   text-align: inherit;
   // space
