@@ -61,7 +61,7 @@ gulp.task('js:watch', function (done) {
 // tasks
 
 gulp.task('watch',
-  gulp.series(gulp.parallel('less'), gulp.parallel('less:watch', 'js:watch'))
+  gulp.series(gulp.parallel('less', 'js'), gulp.parallel('less:watch', 'js:watch'))
 );
 
 gulp.task('build',
