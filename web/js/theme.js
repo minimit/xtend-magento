@@ -24,6 +24,7 @@ require(modules, function (ko, $) {
 
   window.xtScrollbarFixed = function () {
     if (!$('.overlay-outer:visible').length) {
+      $('html').addClass('xt-scrollbar');
       $('html, .xt-fixed').css('padding-right', $.scrollbarWidth());
       $('.modals-overlay').css('right', $.scrollbarWidth());
       var $elements = $('html, .xt-fixed');
@@ -38,6 +39,7 @@ require(modules, function (ko, $) {
   };
   window.xtScrollbarNormal = function () {
     if (!$('.overlay-outer:visible').length) {
+      $('html').removeClass('xt-scrollbar');
       $('.modals-overlay').css('right', '');
       var $elements = $('html, .xt-fixed');
       $elements.addClass('no-transition');
